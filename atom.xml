@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Improving Me]]></title>
-  <link href="http://bforrest.github.com/atom.xml" rel="self"/>
-  <link href="http://bforrest.github.com/"/>
-  <updated>2012-05-04T23:45:44-05:00</updated>
-  <id>http://bforrest.github.com/</id>
+  <link href="http://bforrest.com/atom.xml" rel="self"/>
+  <link href="http://bforrest.com/"/>
+  <updated>2012-05-05T10:09:21-05:00</updated>
+  <id>http://bforrest.com/</id>
   <author>
     <name><![CDATA[Barry Forrest]]></name>
     
@@ -15,28 +15,28 @@
   
   <entry>
     <title type="html"><![CDATA[Doesn't Play Well...]]></title>
-    <link href="http://bforrest.github.com/blog/2012/04/30/doesnt-play-well-dot-dot-dot/"/>
+    <link href="http://bforrest.com/blog/2012/04/30/doesnt-play-well-dot-dot-dot/"/>
     <updated>2012-04-30T08:25:00-05:00</updated>
-    <id>http://bforrest.github.com/blog/2012/04/30/doesnt-play-well-dot-dot-dot</id>
-    <content type="html"><![CDATA[<p>I&#8217;ve been working on some &#8220;prototypes&#8221; for a new <a href="href=" title="http://www.improvingenterprises.com">Improving</a> client. One of our UX people told us to use <a href="href=" title="http://twitter.github.com/bootstrap/">Twitter Bootstrap</a>
+    <id>http://bforrest.com/blog/2012/04/30/doesnt-play-well-dot-dot-dot</id>
+    <content type="html"><![CDATA[<p>I&#8217;ve been working on some &#8220;prototypes&#8221; for a new <a href="http://www.improvingenterprises.com">Improving</a> client. One of our UX people told us to use <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap</a>
 and don&#8217;t look back.</p>
 
-<p>These prototypes are for a data entry focused application, so we&#8217;ve been using the <a href="href=" title="http://jqueryui.com/demos/autocomplete/#combobox">Autocomplete Combobox</a> to
-help speed things along. I tried to also use the <a href="href=" title="http://twitter.github.com/bootstrap/javascript.html#buttons">bootstrap-buttons</a> plugin in conjunction with it, but the buttons weren&#8217;t working as expected.</p>
+<p>These prototypes are for a data entry focused application, so we&#8217;ve been using the <a href="http://jqueryui.com/demos/autocomplete/#combobox">Autocomplete Combobox</a> to
+help speed things along. I tried to also use the <a href="http://twitter.github.com/bootstrap/javascript.html#buttons">bootstrap-buttons</a> plugin in conjunction with it, but the buttons weren&#8217;t working as expected.</p>
 
 <p>I changed the markup to load the button plugin prior to the jquery ui script and the radio buttons looked and behaved as expected, but the auto complete comboboxes
 looked funky and were no longer acting like text boxes and default to select boxes. When I switched back to loading the jquery ui first, the comboboxes resumed their normal operation.</p>
 
-<p>Lacking the time to get to the very bottom of why these two scripts weren&#8217;t playing nice together, I used a lifeline and got advice from a UX buddy. I was pointed toward the <a href="href=" title="http://jqueryui.com/demos/button/#radio">button sets</a>
+<p>Lacking the time to get to the very bottom of why these two scripts weren&#8217;t playing nice together, I used a lifeline and got advice from a UX buddy. I was pointed toward the <a href="http://jqueryui.com/demos/button/#radio">button sets</a>
 jquery ui. After changing the markup to use the button sets, everything was playing nicely together.</p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[Adding CoderWall Badges]]></title>
-    <link href="http://bforrest.github.com/blog/2012/04/22/adding-coderwall-badges/"/>
+    <link href="http://bforrest.com/blog/2012/04/22/adding-coderwall-badges/"/>
     <updated>2012-04-22T10:42:00-05:00</updated>
-    <id>http://bforrest.github.com/blog/2012/04/22/adding-coderwall-badges</id>
+    <id>http://bforrest.com/blog/2012/04/22/adding-coderwall-badges</id>
     <content type="html"><![CDATA[<p>I&#8217;ve picked up a few badges via <a href="http://coderwall.com/">CoderWall</a> and I wanted to include them on the blog with the rest of the information in the right side column.</p>
 
 <p>CoderWall has <a href="http://coderwall.com/api">instructions</a> under the sub heading &#8220;Official blog badge&#8221; that detail how to interact with their web api for retrieving badges. My main investigation was how and where to include these snippets within the octopress templates.</p>
@@ -74,9 +74,9 @@ jquery ui. After changing the markup to use the button sets, everything was play
   
   <entry>
     <title type="html"><![CDATA[Fixed Navigation Bar With Twitter Bootstrap]]></title>
-    <link href="http://bforrest.github.com/blog/2012/04/18/fixed-navigation-bar-with-twitter-bootstrap/"/>
+    <link href="http://bforrest.com/blog/2012/04/18/fixed-navigation-bar-with-twitter-bootstrap/"/>
     <updated>2012-04-18T15:27:00-05:00</updated>
-    <id>http://bforrest.github.com/blog/2012/04/18/fixed-navigation-bar-with-twitter-bootstrap</id>
+    <id>http://bforrest.com/blog/2012/04/18/fixed-navigation-bar-with-twitter-bootstrap</id>
     <content type="html"><![CDATA[<p><a href="http://twitter.github.com/bootstrap/index.html">Twitter Bootstrap</a> has many very interesting features available. I really liked their fixed sub navigation menus for the feature pages. As you scroll past the subnavigation, it docs with the top of the scroll window and stays there. It also enables click navigation to other feature sections.</p>
 
 <p>I wanted to have the same functionality for my own html pages, so I started digging around. Looking at the page source, I saw an include for &#8220;/js/application.js&#8221;, which is included in the github source project, but is not part of the downloaded assets. At the top of the file is this nice disclaimer:</p>
@@ -170,9 +170,9 @@ jquery ui. After changing the markup to use the button sets, everything was play
   
   <entry>
     <title type="html"><![CDATA[Everything Old is New Again]]></title>
-    <link href="http://bforrest.github.com/blog/2012/04/16/everything-old-is-new-again/"/>
+    <link href="http://bforrest.com/blog/2012/04/16/everything-old-is-new-again/"/>
     <updated>2012-04-16T11:56:00-05:00</updated>
-    <id>http://bforrest.github.com/blog/2012/04/16/everything-old-is-new-again</id>
+    <id>http://bforrest.com/blog/2012/04/16/everything-old-is-new-again</id>
     <content type="html"><![CDATA[<p>I spent some time over the weekend dragging along old posts from my tumblr blog that deal with programming. I didn&#8217;t bother with the instagram pictures or the four square checkins. After a few failed attempts to get the tumblr posts where the were suposed to be, I opted to stash them in a working directory and move them by hand.</p>
 
 <p>Now all of my <code>&lt;scarcasm&gt;</code>glorious code related posts<code>&lt;/sarcasm&gt;</code> are in one place, it&#8217;s time to dust up some posts about my shiny new play things <a href="http://twitter.github.com/bootstrap/" title="">Twitter Bootstrasp</a> <a href="https://octopress.org">Octopress</a> and <a href="http://daringfireball.net/projects/markdown/syntax" title="">Markdown</a>. Stand by for more intesting things in the very near future.</p>
@@ -181,9 +181,9 @@ jquery ui. After changing the markup to use the button sets, everything was play
   
   <entry>
     <title type="html"><![CDATA[That was easy]]></title>
-    <link href="http://bforrest.github.com/blog/2012/04/13/that-was-easy/"/>
+    <link href="http://bforrest.com/blog/2012/04/13/that-was-easy/"/>
     <updated>2012-04-13T07:18:00-05:00</updated>
-    <id>http://bforrest.github.com/blog/2012/04/13/that-was-easy</id>
+    <id>http://bforrest.com/blog/2012/04/13/that-was-easy</id>
     <content type="html"><![CDATA[<h2>Taking the Octopress plunge</h2>
 
 <p>Last night I took the plunge and set up <a href="http://octopress.org/">octopress</a> to host a <a href="http://bforrest.github.com">blog on github</a> using github pages. The documentation on octopress.org is impeccable. My only hic-up was not fully understanding that I need to run</p>
@@ -202,9 +202,9 @@ jquery ui. After changing the markup to use the button sets, everything was play
   
   <entry>
     <title type="html"><![CDATA[Programming & Barriers to Entry]]></title>
-    <link href="http://bforrest.github.com/blog/2012/02/27/Programming-and-Barriers-to-Entry/"/>
+    <link href="http://bforrest.com/blog/2012/02/27/Programming-and-Barriers-to-Entry/"/>
     <updated>2012-02-27T00:00:00-06:00</updated>
-    <id>http://bforrest.github.com/blog/2012/02/27/Programming-and-Barriers-to-Entry</id>
+    <id>http://bforrest.com/blog/2012/02/27/Programming-and-Barriers-to-Entry</id>
     <content type="html"><![CDATA[<p>A <a href="https://twitter.com/#!/coridrew">fellow learner</a> has posted <a href="http://truncatedcodr.wordpress.com/2012/01/25/programming-barriers-to-entry/">&#8220;Programming &amp; Barriers to Entry&#8221;</a>. Cori has much to say in this article concentrated around command line tools, vim and Ruby. I&#8217;d like to comment on some of the perceptions and share my own opinions.</p>
 
 <h3>Command Line</h3>
@@ -279,9 +279,9 @@ jquery ui. After changing the markup to use the button sets, everything was play
   
   <entry>
     <title type="html"><![CDATA[treetrim: Trims source code trees]]></title>
-    <link href="http://bforrest.github.com/blog/2012/01/21/Tree-Trim-Source-Cleaner/"/>
+    <link href="http://bforrest.com/blog/2012/01/21/Tree-Trim-Source-Cleaner/"/>
     <updated>2012-01-21T00:00:00-06:00</updated>
-    <id>http://bforrest.github.com/blog/2012/01/21/Tree-Trim-Source-Cleaner</id>
+    <id>http://bforrest.com/blog/2012/01/21/Tree-Trim-Source-Cleaner</id>
     <content type="html"><![CDATA[<p><a href="http://code.google.com/p/treetrim/">Treetrim:</a></p>
 
 <p>I&#8217;ve used this spiffy utility many times. Every time I see a need for it, I&#8217;m working on a PC that doesn&#8217;t have it installed and I can never remember the magic incantation that allowed Google to reveal it to me. So, since I&#8217;m starting to suffer from old-timers, I&#8217;ll keep a handy link for it right here ;-)</p></p>
@@ -290,9 +290,9 @@ jquery ui. After changing the markup to use the button sets, everything was play
   
   <entry>
     <title type="html"><![CDATA[EF Code First & AppHarbor]]></title>
-    <link href="http://bforrest.github.com/blog/2011/08/25/EF-Code-First-and-AppHarbor/"/>
+    <link href="http://bforrest.com/blog/2011/08/25/EF-Code-First-and-AppHarbor/"/>
     <updated>2011-08-25T00:00:00-05:00</updated>
-    <id>http://bforrest.github.com/blog/2011/08/25/EF-Code-First-and-AppHarbor</id>
+    <id>http://bforrest.com/blog/2011/08/25/EF-Code-First-and-AppHarbor</id>
     <content type="html"><![CDATA[<p>Since my employer, <a href="http://www.improvingenterprises.com/">Improving Enterprises</a> lined me up a new gig that uses Entity Framework Code First, I thought I kick off a learning side project with MVC3 and deploy it to <a href="https://appharbor.com/">AppHarbor</a>. Everything seemed simple enough. Use Nuget to install the code first bits, hammer out a couple of model and a datacontext and BOOM! data goes into a database.</p>
 
 <p>It wasn&#8217;t anything pretty, but I was ready to deploy it to AppHarbor. That sounded great, but my first deploy failed. The local build compiled and worked as expected. The source that I pushed to AppHarbor compiled without problem, but the deployment failed.</p>
@@ -328,9 +328,9 @@ jquery ui. After changing the markup to use the button sets, everything was play
   
   <entry>
     <title type="html"><![CDATA[Javascript Programming Patterns]]></title>
-    <link href="http://bforrest.github.com/blog/2011/08/21/Javascript-Programming-Patterns/"/>
+    <link href="http://bforrest.com/blog/2011/08/21/Javascript-Programming-Patterns/"/>
     <updated>2011-08-21T00:00:00-05:00</updated>
-    <id>http://bforrest.github.com/blog/2011/08/21/Javascript-Programming-Patterns</id>
+    <id>http://bforrest.com/blog/2011/08/21/Javascript-Programming-Patterns</id>
     <content type="html"><![CDATA[<p><a href="href=" title="http://www.klauskomenda.com/code/javascript-programming-patterns/#lazy">Javascript Programming Patterns</a></p>
 
 <p>Nice reference material that I got from <a href="href=" title="http://twitter.com/#!/jrgarcia">JR Garcia</a></p>
@@ -341,9 +341,9 @@ jquery ui. After changing the markup to use the button sets, everything was play
   
   <entry>
     <title type="html"><![CDATA[Css for Developers from Dallas TechFest]]></title>
-    <link href="http://bforrest.github.com/blog/2011/08/16/CSS-for-Developers/"/>
+    <link href="http://bforrest.com/blog/2011/08/16/CSS-for-Developers/"/>
     <updated>2011-08-16T00:00:00-05:00</updated>
-    <id>http://bforrest.github.com/blog/2011/08/16/CSS-for-Developers</id>
+    <id>http://bforrest.com/blog/2011/08/16/CSS-for-Developers</id>
     <content type="html"><![CDATA[<p>Here are some of my take aways from <a href="href=" title="http://ericsowell.com/">Eric Sowell&#8217;s</a> presentation at the <a href="href=" title="http://dallastechfest.com/">Dallas Tech Fest</a></p>
 
 <p>+Semantic markup makes reading html simpler</p>
@@ -362,9 +362,9 @@ jquery ui. After changing the markup to use the button sets, everything was play
   
   <entry>
     <title type="html"><![CDATA[The Flat Tire Principle for Source Control]]></title>
-    <link href="http://bforrest.github.com/blog/2011/05/10/The-Flat-Tire-Principle-for-Source-Control/"/>
+    <link href="http://bforrest.com/blog/2011/05/10/The-Flat-Tire-Principle-for-Source-Control/"/>
     <updated>2011-05-10T00:00:00-05:00</updated>
-    <id>http://bforrest.github.com/blog/2011/05/10/The-Flat-Tire-Principle-for-Source-Control</id>
+    <id>http://bforrest.com/blog/2011/05/10/The-Flat-Tire-Principle-for-Source-Control</id>
     <content type="html"><![CDATA[<p><a href="href=" title="http://lostechies.com/erichexter/2009/05/19/the-flat-tire-principal-for-source-control/">The Flat Tire Principle for Source Control</a></p>
 
 <p>Here&#8217;s an oldie but a a goody by <a href="href=" title="http://lostechies.com/erichexter/">Eric Hexter</a> on why you should source control your dependencies and 3rd party libraries. He uses an automobile which carries all the tools required to replace a flat tire to illustrate how we should treat our source control systems. Anything that code depends on to do it&#8217;s job should be stored in the same version control system right along side of the code.</p>
@@ -373,9 +373,9 @@ jquery ui. After changing the markup to use the button sets, everything was play
   
   <entry>
     <title type="html"><![CDATA[Why Johnny can’t build a decent user interface.]]></title>
-    <link href="http://bforrest.github.com/blog/2011/04/23/Why-Johnny-can%27t-build-a-decent-ui/"/>
+    <link href="http://bforrest.com/blog/2011/04/23/Why-Johnny-can%27t-build-a-decent-ui/"/>
     <updated>2011-04-23T00:00:00-05:00</updated>
-    <id>http://bforrest.github.com/blog/2011/04/23/Why-Johnny-can&#8217;t-build-a-decent-ui</id>
+    <id>http://bforrest.com/blog/2011/04/23/Why-Johnny-can&#8217;t-build-a-decent-ui</id>
     <content type="html"><![CDATA[<p><a href="http://jeffreyellis.org/blog/?p=8897" title="">Why Johnny can’t build a decent user interface.</a>An interesting read by <a href="http://thethinkerblog.com/?page_id=5">Jeffrey Ellis</a> that I picked up from a <a title="@shanselman" target="_blank" href="http://twitter.com/#!/shanselman">@shanselman</a> tweet. It is a reminder of why I write software -&gt; for end users to get something done. There&#8217;s a list of questions that I need to keep top of mind when developing applications:</p>
 
 <p>+Who are the users</p>

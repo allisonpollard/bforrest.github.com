@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Twitter Bootstrap | Improving Me]]></title>
-  <link href="http://bforrest.github.com/blog/categories/twitter-bootstrap/atom.xml" rel="self"/>
-  <link href="http://bforrest.github.com/"/>
-  <updated>2012-05-04T23:45:44-05:00</updated>
-  <id>http://bforrest.github.com/</id>
+  <link href="http://bforrest.com/blog/categories/twitter-bootstrap/atom.xml" rel="self"/>
+  <link href="http://bforrest.com/"/>
+  <updated>2012-05-05T10:09:21-05:00</updated>
+  <id>http://bforrest.com/</id>
   <author>
     <name><![CDATA[Barry Forrest]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Fixed Navigation Bar With Twitter Bootstrap]]></title>
-    <link href="http://bforrest.github.com/blog/2012/04/18/fixed-navigation-bar-with-twitter-bootstrap/"/>
+    <link href="http://bforrest.com/blog/2012/04/18/fixed-navigation-bar-with-twitter-bootstrap/"/>
     <updated>2012-04-18T15:27:00-05:00</updated>
-    <id>http://bforrest.github.com/blog/2012/04/18/fixed-navigation-bar-with-twitter-bootstrap</id>
+    <id>http://bforrest.com/blog/2012/04/18/fixed-navigation-bar-with-twitter-bootstrap</id>
     <content type="html"><![CDATA[<p><a href="http://twitter.github.com/bootstrap/index.html">Twitter Bootstrap</a> has many very interesting features available. I really liked their fixed sub navigation menus for the feature pages. As you scroll past the subnavigation, it docs with the top of the scroll window and stays there. It also enables click navigation to other feature sections.</p>
 
 <p>I wanted to have the same functionality for my own html pages, so I started digging around. Looking at the page source, I saw an include for "/js/application.js", which is included in the github source project, but is not part of the downloaded assets. At the top of the file is this nice disclaimer:
