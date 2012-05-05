@@ -5,11 +5,12 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Everything Old is New Again - Improving Me</title>
+  <title>Doesn't Play Well... - Improving Me</title>
   <meta name="author" content="Barry Forrest">
 
   
-  <meta name="description" content="I spent some time over the weekend dragging along old posts from my tumblr blog that deal with programming. I didn&#8217;t bother with the instagram &hellip;">
+  <meta name="description" content="I&#8217;ve been working on some &#8220;prototypes&#8221; for a new Improving client. One of our UX people told us to use Twitter Bootstrap
+and don&# &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -25,7 +26,7 @@
   <link href="/assets/css/datepicker.css" rel="stylesheet">
 
   
-  <link rel="canonical" href="http://bforrest.github.com/blog/2012/04/16/everything-old-is-new-again">
+  <link rel="canonical" href="http://bforrest.github.com/blog/2012/04/30/doesnt-play-well-dot-dot-dot">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -86,7 +87,7 @@
   
   <header>
     
-      <h1 class="entry-title">Everything Old Is New Again</h1>
+      <h1 class="entry-title">Doesn't Play Well...</h1>
     
     
       <p class="meta">
@@ -102,16 +103,24 @@
   
 
 
-<time datetime="2012-04-16T11:56:00-05:00" pubdate data-updated="true">Apr 16<span>th</span>, 2012</time>
+<time datetime="2012-04-30T08:25:00-05:00" pubdate data-updated="true">Apr 30<span>th</span>, 2012</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>I spent some time over the weekend dragging along old posts from my tumblr blog that deal with programming. I didn&#8217;t bother with the instagram pictures or the four square checkins. After a few failed attempts to get the tumblr posts where the were suposed to be, I opted to stash them in a working directory and move them by hand.</p>
+<div class="entry-content"><p>I&#8217;ve been working on some &#8220;prototypes&#8221; for a new <a href="href=" title="http://www.improvingenterprises.com">Improving</a> client. One of our UX people told us to use <a href="href=" title="http://twitter.github.com/bootstrap/">Twitter Bootstrap</a>
+and don&#8217;t look back.</p>
 
-<p>Now all of my <code>&lt;scarcasm&gt;</code>glorious code related posts<code>&lt;/sarcasm&gt;</code> are in one place, it&#8217;s time to dust up some posts about my shiny new play things <a href="http://twitter.github.com/bootstrap/" title="">Twitter Bootstrasp</a> <a href="https://octopress.org">Octopress</a> and <a href="http://daringfireball.net/projects/markdown/syntax" title="">Markdown</a>. Stand by for more intesting things in the very near future.</p>
+<p>These prototypes are for a data entry focused application, so we&#8217;ve been using the <a href="href=" title="http://jqueryui.com/demos/autocomplete/#combobox">Autocomplete Combobox</a> to
+help speed things along. I tried to also use the <a href="href=" title="http://twitter.github.com/bootstrap/javascript.html#buttons">bootstrap-buttons</a> plugin in conjunction with it, but the buttons weren&#8217;t working as expected.</p>
+
+<p>I changed the markup to load the button plugin prior to the jquery ui script and the radio buttons looked and behaved as expected, but the auto complete comboboxes
+looked funky and were no longer acting like text boxes and default to select boxes. When I switched back to loading the jquery ui first, the comboboxes resumed their normal operation.</p>
+
+<p>Lacking the time to get to the very bottom of why these two scripts weren&#8217;t playing nice together, I used a lifeline and got advice from a UX buddy. I was pointed toward the <a href="href=" title="http://jqueryui.com/demos/button/#radio">button sets</a>
+jquery ui. After changing the markup to use the button sets, everything was playing nicely together.</p>
 </div>
 
 
@@ -134,7 +143,7 @@
   
 
 
-<time datetime="2012-04-16T11:56:00-05:00" pubdate data-updated="true">Apr 16<span>th</span>, 2012</time>
+<time datetime="2012-04-30T08:25:00-05:00" pubdate data-updated="true">Apr 30<span>th</span>, 2012</time>
       
 
 
@@ -142,7 +151,7 @@
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://bforrest.github.com/blog/2012/04/16/everything-old-is-new-again/" data-via="bforrest30" data-counturl="http://bforrest.github.com/blog/2012/04/16/everything-old-is-new-again/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://bforrest.github.com/blog/2012/04/30/doesnt-play-well-dot-dot-dot/" data-via="bforrest30" data-counturl="http://bforrest.github.com/blog/2012/04/30/doesnt-play-well-dot-dot-dot/" >Tweet</a>
   
   
   
@@ -153,10 +162,8 @@
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2012/04/13/that-was-easy/" title="Previous Post: That was easy">&laquo; That was easy</a>
+        <a class="basic-alignment left" href="/blog/2012/04/22/adding-coderwall-badges/" title="Previous Post: Adding CoderWall Badges">&laquo; Adding CoderWall Badges</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2012/04/18/fixed-navigation-bar-with-twitter-bootstrap/" title="Next Post: Fixed Navigation Bar With Twitter Bootstrap">Fixed Navigation Bar With Twitter Bootstrap &raquo;</a>
       
     </p>
   </footer>
@@ -309,8 +316,8 @@
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://bforrest.github.com/blog/2012/04/16/everything-old-is-new-again/';
-        var disqus_url = 'http://bforrest.github.com/blog/2012/04/16/everything-old-is-new-again/';
+        var disqus_identifier = 'http://bforrest.github.com/blog/2012/04/30/doesnt-play-well-dot-dot-dot/';
+        var disqus_url = 'http://bforrest.github.com/blog/2012/04/30/doesnt-play-well-dot-dot-dot/';
         var disqus_script = 'embed.js';
       
     (function () {
