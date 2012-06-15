@@ -4,7 +4,7 @@
   <title><![CDATA[Category: CSS | Improving Me]]></title>
   <link href="http://bforrest.com/blog/categories/css/atom.xml" rel="self"/>
   <link href="http://bforrest.com/"/>
-  <updated>2012-06-15T09:14:58-05:00</updated>
+  <updated>2012-06-15T12:43:12-05:00</updated>
   <id>http://bforrest.com/</id>
   <author>
     <name><![CDATA[Barry Forrest]]></name>
@@ -30,8 +30,7 @@ But I discovered that it is not JUST junk, there is a processScroll function tha
 
 <p>``` javascript Scroll function and handler wiring
 // fix sub nav on scroll
-   var $win = $(window)
-   , $nav = $('.subnav')</p>
+   var $win = $(window)</p>
 
 <pre><code>  , navTop = $('.subnav').length &amp;&amp; $('.subnav').offset().top - 40
   , isFixed = 0
