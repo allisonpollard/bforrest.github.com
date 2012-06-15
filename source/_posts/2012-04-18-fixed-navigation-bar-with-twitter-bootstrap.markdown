@@ -19,6 +19,7 @@ But I discovered that it is not JUST junk, there is a processScroll function tha
 ``` javascript Scroll function and handler wiring
 // fix sub nav on scroll
    var $win = $(window)
+   , $nav = $('.subnav')  
       , navTop = $('.subnav').length && $('.subnav').offset().top - 40
       , isFixed = 0
 
