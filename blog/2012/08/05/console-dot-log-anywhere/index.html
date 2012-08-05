@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Css for Developers from Dallas TechFest - Improving Me</title>
+  <title>console.log anywhere - Improving Me</title>
   <meta name="author" content="Barry Forrest">
 
   
-  <meta name="description" content="Here are some of my take aways from Eric Sowell&#8217;s presentation at the Dallas Tech Fest +Semantic markup makes reading html simpler +Modernizer &hellip;">
+  <meta name="description" content="My current assingment for Improving Enterprises has me writing much more client-side javascript. I&#8217;m not a javascript ninja, so I lean on the &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://bforrest.com/blog/2011/08/16/CSS-for-Developers/">
+  <link rel="canonical" href="http://bforrest.com/blog/2012/08/05/console-dot-log-anywhere/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -79,7 +79,7 @@
   
   <header>
     
-      <h1 class="entry-title">Css for Developers From Dallas TechFest</h1>
+      <h1 class="entry-title">console.log Anywhere</h1>
     
     
       <p class="meta">
@@ -95,26 +95,31 @@
   
 
 
-<time datetime="2011-08-16T00:00:00-05:00" pubdate data-updated="true">Aug 16<span>th</span>, 2011</time>
+<time datetime="2012-08-05T11:46:00-05:00" pubdate data-updated="true">Aug 5<span>th</span>, 2012</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>Here are some of my take aways from <a href="href=" title="http://ericsowell.com/">Eric Sowell&#8217;s</a> presentation at the <a href="href=" title="http://dallastechfest.com/">Dallas Tech Fest</a></p>
+<div class="entry-content"><p>My current assingment for <a href="http://www.improvingenterprises.com" target="_blank">Improving Enterprises</a> has me writing much more client-side javascript. I&#8217;m not a javascript ninja, so I lean on the console window to confirm that the script is doing what I expected it to do. This approach works great until I view a page in IE, which has no clue what &#8220;console&#8221; means and acosts me with script error popups.</p>
 
-<p>+Semantic markup makes reading html simpler</p>
+<p>This finally got annoying enough that I started looking for a universal solution. <a href="http://stackoverflow.com/a/7585409" target="_blank">Stack Overflow</a> to the rescue.  Just so I don&#8217;t have to search high and low for it again, I put a gist on github where it&#8217;s easy for me to find again.</p>
 
-<p>+Modernizer of Html5Shim make older browsers work with semantic tags</p>
+<div><script src='https://gist.github.com/3188643.js?file='></script>
+<noscript><pre><code>if (!window.console) {
+    (function() {
+      var names = [&quot;log&quot;, &quot;debug&quot;, &quot;info&quot;, &quot;warn&quot;, &quot;error&quot;, &quot;assert&quot;, &quot;dir&quot;, &quot;dirxml&quot;,
+      &quot;group&quot;, &quot;groupEnd&quot;, &quot;time&quot;, &quot;timeEnd&quot;, &quot;count&quot;, &quot;trace&quot;, &quot;profile&quot;, &quot;profileEnd&quot;];
+      window.console = {};
+      for (var i = 0; i &lt; names.length; ++i) {
+        window.console[names[i]] = function() {};
+      }
+    }());
+  }</code></pre></noscript></div>
 
-<p>+Using a &#8220;css reset&#8221; can save you lots of grief and frustration</p>
 
-<p>The css reset Eric used came from Eric Meyer&#8217;s site. I&#8217;ve seen similar settings in the Blueprint Css style sheets.</p>
-
-<p>I aslo heard the phrase &#8220;In general, you should be more specific&#8221;. That sounds rather odd, but given a context of trying to cascade styles to UI elements, it makes more sense. When you can be more specific with your selectors, you will be less surprised by the result.</p>
-
-<p>For additional resources for learning about Css, Eric suggested books by Zeldman, Marcotte, Cederholm and Meyer.</p>
+<p>Now while I&#8217;m testing things in different browser while developing the scripts, I don&#8217;t have IE complaining about a script error.</p>
 </div>
 
 
@@ -137,7 +142,7 @@
   
 
 
-<time datetime="2011-08-16T00:00:00-05:00" pubdate data-updated="true">Aug 16<span>th</span>, 2011</time>
+<time datetime="2012-08-05T11:46:00-05:00" pubdate data-updated="true">Aug 5<span>th</span>, 2012</time>
       
 
 
@@ -145,7 +150,7 @@
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://bforrest.com/blog/2011/08/16/CSS-for-Developers/" data-via="bforrest30" data-counturl="http://bforrest.com/blog/2011/08/16/CSS-for-Developers/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://bforrest.com/blog/2012/08/05/console-dot-log-anywhere/" data-via="bforrest30" data-counturl="http://bforrest.com/blog/2012/08/05/console-dot-log-anywhere/" >Tweet</a>
   
   
   
@@ -156,14 +161,18 @@
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2011/05/10/The-Flat-Tire-Principle-for-Source-Control/" title="Previous Post: The Flat Tire Principle for Source Control">&laquo; The Flat Tire Principle for Source Control</a>
+        <a class="basic-alignment left" href="/blog/2012/04/30/doesnt-play-well-dot-dot-dot/" title="Previous Post: Doesn't Play Well...">&laquo; Doesn't Play Well...</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2011/08/21/Javascript-Programming-Patterns/" title="Next Post: Javascript Programming Patterns">Javascript Programming Patterns &raquo;</a>
       
     </p>
   </footer>
 </article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
 
 </div>
 
@@ -305,7 +314,10 @@
       var disqus_shortname = 'bforrest-github-com';
       
         
-        var disqus_script = 'count.js';
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://bforrest.com/blog/2012/08/05/console-dot-log-anywhere/';
+        var disqus_url = 'http://bforrest.com/blog/2012/08/05/console-dot-log-anywhere/';
+        var disqus_script = 'embed.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;

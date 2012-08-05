@@ -9,8 +9,7 @@
   <meta name="author" content="Barry Forrest">
 
   
-  <meta name="description" content="I&#8217;ve been working on some &#8220;prototypes&#8221; for a new Improving client. One of our UX people told us to use Twitter Bootstrap
-and don&# &hellip;">
+  <meta name="description" content="My current assingment for Improving Enterprises has me writing much more client-side javascript. I&#8217;m not a javascript ninja, so I lean on the &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -77,6 +76,59 @@ and don&# &hellip;">
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/08/05/console-dot-log-anywhere/">console.log Anywhere</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-08-05T11:46:00-05:00" pubdate data-updated="true">Aug 5<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>My current assingment for <a href="http://www.improvingenterprises.com" target="_blank">Improving Enterprises</a> has me writing much more client-side javascript. I&#8217;m not a javascript ninja, so I lean on the console window to confirm that the script is doing what I expected it to do. This approach works great until I view a page in IE, which has no clue what &#8220;console&#8221; means and acosts me with script error popups.</p>
+
+<p>This finally got annoying enough that I started looking for a universal solution. <a href="http://stackoverflow.com/a/7585409" target="_blank">Stack Overflow</a> to the rescue.  Just so I don&#8217;t have to search high and low for it again, I put a gist on github where it&#8217;s easy for me to find again.</p>
+
+<div><script src='https://gist.github.com/3188643.js?file='></script>
+<noscript><pre><code>if (!window.console) {
+    (function() {
+      var names = [&quot;log&quot;, &quot;debug&quot;, &quot;info&quot;, &quot;warn&quot;, &quot;error&quot;, &quot;assert&quot;, &quot;dir&quot;, &quot;dirxml&quot;,
+      &quot;group&quot;, &quot;groupEnd&quot;, &quot;time&quot;, &quot;timeEnd&quot;, &quot;count&quot;, &quot;trace&quot;, &quot;profile&quot;, &quot;profileEnd&quot;];
+      window.console = {};
+      for (var i = 0; i &lt; names.length; ++i) {
+        window.console[names[i]] = function() {};
+      }
+    }());
+  }</code></pre></noscript></div>
+
+
+<p>Now while I&#8217;m testing things in different browser while developing the scripts, I don&#8217;t have IE complaining about a script error.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -649,54 +701,6 @@ jquery ui. After changing the markup to use the button sets, everything was play
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2011/08/16/CSS-for-Developers/">Css for Developers From Dallas TechFest</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-08-16T00:00:00-05:00" pubdate data-updated="true">Aug 16<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Here are some of my take aways from <a href="href=" title="http://ericsowell.com/">Eric Sowell&#8217;s</a> presentation at the <a href="href=" title="http://dallastechfest.com/">Dallas Tech Fest</a></p>
-
-<p>+Semantic markup makes reading html simpler</p>
-
-<p>+Modernizer of Html5Shim make older browsers work with semantic tags</p>
-
-<p>+Using a &#8220;css reset&#8221; can save you lots of grief and frustration</p>
-
-<p>The css reset Eric used came from Eric Meyer&#8217;s site. I&#8217;ve seen similar settings in the Blueprint Css style sheets.</p>
-
-<p>I aslo heard the phrase &#8220;In general, you should be more specific&#8221;. That sounds rather odd, but given a context of trying to cascade styles to UI elements, it makes more sense. When you can be more specific with your selectors, you will be less surprised by the result.</p>
-
-<p>For additional resources for learning about Css, Eric suggested books by Zeldman, Marcotte, Cederholm and Meyer.</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/2/">&larr; Older</a>
@@ -712,6 +716,10 @@ jquery ui. After changing the markup to use the button sets, everything was play
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2012/08/05/console-dot-log-anywhere/">console.log anywhere</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2012/04/30/doesnt-play-well-dot-dot-dot/">Doesn&#8217;t Play Well&#8230;</a>
       </li>
     
@@ -725,10 +733,6 @@ jquery ui. After changing the markup to use the button sets, everything was play
     
       <li class="post">
         <a href="/blog/2012/04/16/everything-old-is-new-again/">Everything Old is New Again</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/04/13/that-was-easy/">That was easy</a>
       </li>
     
   </ul>
@@ -754,7 +758,7 @@ jquery ui. After changing the markup to use the button sets, everything was play
 
         github.showRepos({
             user: 'bforrest',
-            count: 16,
+            count: 4,
             skip_forks: true,
             target: '#gh_repos'
         });
