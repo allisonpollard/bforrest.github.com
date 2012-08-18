@@ -28,15 +28,15 @@ Eventually somebody at e*Trade actually read the content of a message before pic
 This was at the end of May. It's the middle of August as I write this and no one at eTrade has "troubleshooted" it or fixed the problem.
 
 Here is the form that their quick transfer uses:
-{% jsfiddle pazZp html %}
+{% gist 3387438 theForm.html %}	
 
 This is the buggy code block within the ValidateForm function:
-{% jsfiddle pazZp js %}
+{% gist 3387438 buggyBlock.js %}
 Since document.theForm.transfer_freq.options.value is undefined, the comparison is always going to be true regardless of the value that the user actually selected. I'm fairly certain that they intended to compare the value of the selected option, but that isn't what that javascript is actually doing.
 
 
 This is the bug fix that I implemented 4 months ago that e*Trade hasn't bothered to correct
-{% jsfiddle FsAPQ js %}
+{% gist 3387438 bug_fix.js %}
 	
 
 With a little jQuery goodness, I can actually perform the comparison that I believe was intended. Now the first part of the expression has a chance to evaluate to false.
