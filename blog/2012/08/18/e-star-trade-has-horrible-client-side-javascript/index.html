@@ -121,19 +121,41 @@
 
 <p>Here is the form that their quick transfer uses:</p>
 
-<iframe style="width: 100%; height: 300px" src="http://jsfiddle.net/pazZp/embedded/html/light/"></iframe>
+<div><script src='https://gist.github.com/3387438.js?file=theForm.html'></script>
+<noscript><pre><code>&lt;form name=&quot;theForm&quot;&gt;
+&lt;select name=&quot;transfer_freq&quot;&gt;
+    &lt;option value=&quot;1&quot;&gt;One Time&lt;/option&gt;
+    &lt;option value=&quot;5&quot;&gt;Once a Month&lt;/option&gt;
+&lt;/select&gt;
+&lt;br/&gt;
+    &lt;input onclick=&quot;javascript:GoToAmount(.00);&quot; checked=&quot;true&quot; type=&quot;radio&quot; name=&quot;amounttype&quot; value=&quot;MP&quot;&gt;&lt;b&gt;Minimum Payment -&lt;/b&gt; $0 &lt;br/&gt;
+&lt;input onclick=&quot;javascript:GoToAmount(285.70);&quot; type=&quot;radio&quot; name=&quot;amounttype&quot; value=&quot;LSB&quot;&gt;&lt;b&gt;Statement Balance&lt;/b&gt;&amp;nbsp;(as of&amp;nbsp;07/27/12) - $285.7 &lt;br/&gt;
+&lt;input onclick=&quot;javascript:GoToAmount(187.09);&quot; type=&quot;radio&quot; name=&quot;amounttype&quot; value=&quot;CB&quot;&gt;&lt;b&gt;Current Balance -&lt;/b&gt; $187.09 &lt;br/&gt;
+&lt;input onclick=&quot;javascript:CustomAmount();&quot; type=&quot;radio&quot; name=&quot;amounttype&quot; value=&quot;CA&quot;&gt;&lt;b&gt;Custom Amount&lt;/b&gt;
+&lt;/form&gt;
+​</code></pre></noscript></div>
 
 
 <p>This is the buggy code block within the ValidateForm function:</p>
 
-<iframe style="width: 100%; height: 300px" src="http://jsfiddle.net/pazZp/embedded/js/light/"></iframe>
+<div><script src='https://gist.github.com/3387438.js?file=buggyBlock.js'></script>
+<noscript><pre><code>//if  select current balance, frequency cannot be once a month - must be one time
+if ((document.theForm.transfer_freq.options.value != &quot;1&quot;) &amp;&amp; (document.theForm.amounttype[2].checked)) {
+    alert(&quot;Once a Month payments for Current Balance are not available.  Please select Minimum Payment, Statement Balance, or Custom Amount if you are entering a recurring payment.&quot;);
+    return false;
+}​</code></pre></noscript></div>
 
 
 <p>Since document.theForm.transfer_freq.options.value is undefined, the comparison is always going to be true regardless of the value that the user actually selected. I&#8217;m fairly certain that they intended to compare the value of the selected option, but that isn&#8217;t what that javascript is actually doing.</p>
 
 <p>This is the bug fix that I implemented 4 months ago that e*Trade hasn&#8217;t bothered to correct</p>
 
-<iframe style="width: 100%; height: 300px" src="http://jsfiddle.net/FsAPQ/embedded/js/light/"></iframe>
+<div><script src='https://gist.github.com/3387438.js?file=bug_fix.js'></script>
+<noscript><pre><code> //if  select current balance, frequency cannot be once a month - must be one time
+ if (($('select[name=&quot;transfer_freq&quot;] option:selected').val() !==&quot;1&quot;) &amp;&amp; (document.theForm.amounttype[2].checked)){ 
+    alert(&quot;Once a Month payments for Current Balance are not available.  Please select Minimum Payment, Statement Balance, or Custom Amount if you are entering a recurring payment.&quot;);
+    return false;        
+ }​</code></pre></noscript></div>
 
 
 <p>With a little jQuery goodness, I can actually perform the comparison that I believe was intended. Now the first part of the expression has a chance to evaluate to false.</p>
