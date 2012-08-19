@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Twitter Bootstrap | Improving Me]]></title>
   <link href="http://bforrest.com/blog/categories/twitter-bootstrap/atom.xml" rel="self"/>
   <link href="http://bforrest.com/"/>
-  <updated>2012-08-18T11:15:25-05:00</updated>
+  <updated>2012-08-19T11:11:28-05:00</updated>
   <id>http://bforrest.com/</id>
   <author>
     <name><![CDATA[Barry Forrest]]></name>
@@ -30,10 +30,10 @@ But I discovered that it is not JUST junk, there is a processScroll function tha
 
 <p>``` javascript Scroll function and handler wiring
 // fix sub nav on scroll
-   var $win = $(window)</p>
+   var $win = $(window)
+   , $nav = $('.subnav')</p>
 
-<pre><code>  , $nav = $('.subnav')
-  , navTop = $('.subnav').length &amp;&amp; $('.subnav').offset().top - 40
+<pre><code>  , navTop = $('.subnav').length &amp;&amp; $('.subnav').offset().top - 40
   , isFixed = 0
 </code></pre>
 

@@ -4,7 +4,7 @@
   <title><![CDATA[Improving Me]]></title>
   <link href="http://bforrest.com/atom.xml" rel="self"/>
   <link href="http://bforrest.com/"/>
-  <updated>2012-08-18T11:15:25-05:00</updated>
+  <updated>2012-08-19T11:11:28-05:00</updated>
   <id>http://bforrest.com/</id>
   <author>
     <name><![CDATA[Barry Forrest]]></name>
@@ -44,7 +44,7 @@
     &lt;option value=&quot;5&quot;&gt;Once a Month&lt;/option&gt;
 &lt;/select&gt;
 &lt;br/&gt;
-    &lt;input onclick=&quot;javascript:GoToAmount(.00);&quot; checked=&quot;true&quot; type=&quot;radio&quot; name=&quot;amounttype&quot; value=&quot;MP&quot;&gt;&lt;b&gt;Minimum Payment -&lt;/b&gt; $0 &lt;br/&gt;
+&lt;input onclick=&quot;javascript:GoToAmount(.00);&quot; checked=&quot;true&quot; type=&quot;radio&quot; name=&quot;amounttype&quot; value=&quot;MP&quot;&gt;&lt;b&gt;Minimum Payment -&lt;/b&gt; $0 &lt;br/&gt;
 &lt;input onclick=&quot;javascript:GoToAmount(285.70);&quot; type=&quot;radio&quot; name=&quot;amounttype&quot; value=&quot;LSB&quot;&gt;&lt;b&gt;Statement Balance&lt;/b&gt;&amp;nbsp;(as of&amp;nbsp;07/27/12) - $285.7 &lt;br/&gt;
 &lt;input onclick=&quot;javascript:GoToAmount(187.09);&quot; type=&quot;radio&quot; name=&quot;amounttype&quot; value=&quot;CB&quot;&gt;&lt;b&gt;Current Balance -&lt;/b&gt; $187.09 &lt;br/&gt;
 &lt;input onclick=&quot;javascript:CustomAmount();&quot; type=&quot;radio&quot; name=&quot;amounttype&quot; value=&quot;CA&quot;&gt;&lt;b&gt;Custom Amount&lt;/b&gt;
@@ -207,7 +207,7 @@ jquery ui. After changing the markup to use the button sets, everything was play
 <span class='line-number'>20</span>
 </pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="c1">// fix sub nav on scroll</span>
 </span><span class='line'>   <span class="kd">var</span> <span class="nx">$win</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="nb">window</span><span class="p">)</span>
-</span><span class='line'>      <span class="p">,</span> <span class="nx">$nav</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.subnav&#39;</span><span class="p">)</span>
+</span><span class='line'>   <span class="p">,</span> <span class="nx">$nav</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.subnav&#39;</span><span class="p">)</span>
 </span><span class='line'>      <span class="p">,</span> <span class="nx">navTop</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.subnav&#39;</span><span class="p">).</span><span class="nx">length</span> <span class="o">&amp;&amp;</span> <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.subnav&#39;</span><span class="p">).</span><span class="nx">offset</span><span class="p">().</span><span class="nx">top</span> <span class="o">-</span> <span class="mi">40</span>
 </span><span class='line'>      <span class="p">,</span> <span class="nx">isFixed</span> <span class="o">=</span> <span class="mi">0</span>
 </span><span class='line'>
