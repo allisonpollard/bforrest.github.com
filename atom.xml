@@ -4,7 +4,7 @@
   <title><![CDATA[Improving Me]]></title>
   <link href="http://bforrest.com/atom.xml" rel="self"/>
   <link href="http://bforrest.com/"/>
-  <updated>2012-08-19T19:26:27-05:00</updated>
+  <updated>2012-08-24T08:51:32-05:00</updated>
   <id>http://bforrest.com/</id>
   <author>
     <name><![CDATA[Barry Forrest]]></name>
@@ -14,10 +14,10 @@
 
   
   <entry>
-    <title type="html"><![CDATA[e*trade has horrible client-side javascript]]></title>
-    <link href="http://bforrest.com/blog/2012/08/18/e-star-trade-has-horrible-client-side-javascript/"/>
+    <title type="html"><![CDATA[e*trade has buggy client-side javascript]]></title>
+    <link href="http://bforrest.com/blog/2012/08/18/e-star-trade-has-buggy-client-side-javascript/"/>
     <updated>2012-08-18T08:47:00-05:00</updated>
-    <id>http://bforrest.com/blog/2012/08/18/e-star-trade-has-horrible-client-side-javascript</id>
+    <id>http://bforrest.com/blog/2012/08/18/e-star-trade-has-buggy-client-side-javascript</id>
     <content type="html"><![CDATA[<p>Once a month I get a little reminder that I need to go pay my e*Trade credit card bill. Every month for as long as I can remember I&#8217;ve tried to use their user interface to pay off my current balance and been told by an error dialog that my selection is not valid.</p>
 
 <p><img src="http://bforrest.com/images/eTrade_Error.png" alt="Error Message"/></p>
