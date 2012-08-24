@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "e*trade has horrible client-side javascript"
+title: "e*trade has buggy client-side javascript"
 date: 2012-08-18 08:47
 comments: true
 categories: 
