@@ -49,7 +49,12 @@ module Jekyll
   class CodeBlock < Liquid::Block
     include HighlightCode
     include TemplateWrapper
+<<<<<<< HEAD
+    CaptionUrlTitle = /(\S[\S\s]*)\s+(https?:\/\/)(\S+)\s+(.+)/i
+    CaptionUrl = /(\S[\S\s]*)\s+(https?:\/\/)(\S+)/i
+=======
     CaptionUrlTitle = /(\S[\S\s]*)\s+(https?:\/\/\S+|\/\S+)\s*(.+)?/i
+>>>>>>> 9decd23b5a7a2f26590a4995cafcba010695717d
     Caption = /(\S[\S\s]*)/
     def initialize(tag_name, markup, tokens)
       @title = nil
@@ -62,7 +67,14 @@ module Jekyll
       end
       if markup =~ CaptionUrlTitle
         @file = $1
+<<<<<<< HEAD
+        @caption = "<figcaption><span>#{$1}</span><a href='#{$2 + $3}'>#{$4}</a></figcaption>"
+      elsif markup =~ CaptionUrl
+        @file = $1
+        @caption = "<figcaption><span>#{$1}</span><a href='#{$2 + $3}'>link</a></figcaption>"
+=======
         @caption = "<figcaption><span>#{$1}</span><a href='#{$2}'>#{$3 || 'link'}</a></figcaption>"
+>>>>>>> 9decd23b5a7a2f26590a4995cafcba010695717d
       elsif markup =~ Caption
         @file = $1
         @caption = "<figcaption><span>#{$1}</span></figcaption>\n"
