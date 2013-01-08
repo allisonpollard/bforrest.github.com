@@ -20,7 +20,7 @@ For my first attempt to host the ReportViewer control, I tried to juggle the par
 
 
 
-``` C# Here is what I ended up with in the WebForm code-behind:
+``` c# Here is what I ended up with in the WebForm code-behind:
 protected override void OnInit(EventArgs e)
 {
     base.OnInit(e);
