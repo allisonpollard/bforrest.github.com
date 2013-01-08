@@ -24,6 +24,3 @@ Here is what I ended up with in the WebForm code-behind:
 {% gist 4467831 %}
 
  wound up doing it setting the report server and report title in the OnInit method of the web-page. I also bound the selection controls to the available options for the current user and wired up the change event handlers. PostBack events that aren't triggered by the selection controls that I added to the web form are ignored by the code behind and the httpHandler for the report viewer control handles the interaction with the SSRS server.
-
-https://gist.github.com/4467831
-
