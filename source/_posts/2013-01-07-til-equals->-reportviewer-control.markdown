@@ -18,35 +18,9 @@ I scrambled to learn how to host the ReportViewer Control and have it render rep
 
 For my first attempt to host the ReportViewer control, I tried to juggle the parameters and update the report URL on each request. As it turns out, I was doing that wrong and completely broke the drill-through reports, paging and searching. After about half a day of combing the Internet for the secrets to keeping the remote reports fully functioning and not finding much helpful, I started to experiment.
 
+Here is what I ended up with in the WebForm code-behind:
 
 
-``` c# Here is what I ended up with in the WebForm code-behind:
-protected override void OnInit(EventArgs e)
-{
-    base.OnInit(e);
-    ReportViewer1.ProcessingMode = ProcessingMode.Remote;
-    ReportViewer1.ServerReport.ReportServerUrl = new Uri("http://Report_Server/Report_Root");
-    ReportViewer1.ServerReport.DisplayName = "Report Title";
-}
- 
-protected void Page_Load(object sender, EventArgs e)
-{
-    if (IsPostBack) return;
-    
-    var inbound_query_param = Request.RequestContext.RouteData.Values["QueryString_Parameter"].ToString();
-    var report_param = new ReportParameter("SSRS_Report_Parameter", inbound_query_param);
-    var portalUser = ((UserIdentity)User.Identity);
- 
-    if (portalUser.Account != account)
-    {
-        // Log invalid access attempt
-    }
- 
-    ReportViewer1.ServerReport.ReportPath = "/Report_Server_Report_Collection/Recipient Summary Page";
-    ReportViewer1.ServerReport.SetParameters(new[] { report_param });
-    ReportViewer1.ServerReport.Refresh();
-}
-```
 {% gist 4467831 %}
 
  wound up doing it setting the report server and report title in the OnInit method of the web-page. I also bound the selection controls to the available options for the current user and wired up the change event handlers. PostBack events that aren't triggered by the selection controls that I added to the web form are ignored by the code behind and the httpHandler for the report viewer control handles the interaction with the SSRS server.
