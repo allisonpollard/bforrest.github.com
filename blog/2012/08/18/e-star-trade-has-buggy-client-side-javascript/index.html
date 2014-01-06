@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Improving Me</title>
+  <title>e*trade has buggy client-side javascript - Improving Me</title>
   <meta name="author" content="Barry Forrest">
 
   
-  <meta name="description" content="TIL: KnockoutJS Click Handler While working on a client project for @improving I’ve learned a few things about Knockoutjs and its behavior. Most of &hellip;">
+  <meta name="description" content="Once a month I get a little reminder that I need to go pay my e*Trade credit card bill. Every month for as long as I can remember I&#8217;ve tried to &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://bforrest.com/">
+  <link rel="canonical" href="http://bforrest.com/blog/2012/08/18/e-star-trade-has-buggy-client-side-javascript/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -74,115 +74,12 @@
 </nav>
   <div id="main">
     <div id="content">
-      <div class="blog-index">
+      <div>
+<article class="hentry" role="article">
   
-  
-  
-    <article>
-      
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2014/01/05/til-equals-%3E-til-knockoutjs/">TIL => TIL: Knockoutjs</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-01-05T21:46:00-06:00" pubdate data-updated="true">Jan 5<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><h2>TIL: KnockoutJS Click Handler</h2>
-
-<p>While working on a client project for <a href="https://twitter.com/improving">@improving</a>  I’ve learned a few things about Knockoutjs and its behavior. Most of them have been learned the hard way, by reading documentation after something didn’t work as expected.</p>
-
-<p>The ko click binding was one of those things. I was trying to listen for a click event for on a checkbox and do some fancy css swapping to highlight the user’s selection. Changing the styles worked smooth as butter, but the box remained unchecked.</p>
-
-<p>After several refreshes of the page, still no check in the box. The knockoutJS documentation covers this case - it is clearly noted as
-Note 3: Allowing the default click action
-The ko.click binding doesn’t pass along the actual event. In order for the event to bubble, the bound function must return ‘true’.</p>
-
-<p>Now that I’ve added a return value of true to my javascript handler, the checkbox is updated as I had expected it to be from the beginning!</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/01/07/til-equals-%3E-reportviewer-control/">TIL => ReportViewer Control, Less Is More</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-01-07T21:32:00-06:00" pubdate data-updated="true">Jan 7<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><h2>TIL: ReportViewer WebControl => Less is More</h2>
-
-<p>Stop me if you&#8217;ve heard this one: &#8220;Their IT staff is going to take care of that development &#8230;&#8221; And so it was recently on a project I am developing.</p>
-
-<p>A separate development activity was spun up to create the required SSRS reports which were to be hosted on a Report Server. Well the Report Server uses Active Directory accounts for authentication and authorization. The portal that I&#8217;m building essentially uses the ASP.net Membership Provider and its services.</p>
-
-<p>Suddenly, I was confronted with a situation where I needed to provide access to reports hosted on a report server from my MVC application and handle security for the reports too. Enter the ReportViewer control, hosted in an ASP.net WebForm ASPX page and running remote mode SSRS reports.</p>
-
-<p>I scrambled to learn how to host the ReportViewer Control and have it render reports in my application. I didn&#8217;t search long enough to find a fully baked, working sample, but was able to get a report to render based on an initial set of parameters. I was happy and smug as a bug in a rug. But then I find out that this report should page and sort and link through to other reports. Now I&#8217;m a sad panda.</p>
-
-<p>For my first attempt to host the ReportViewer control, I tried to juggle the parameters and update the report URL on each request. As it turns out, I was doing that wrong and completely broke the drill-through reports, paging and searching. After about half a day of combing the Internet for the secrets to keeping the remote reports fully functioning and not finding much helpful, I started to experiment.</p>
-
-<p>Here is what I ended up with in the WebForm code-behind:</p>
-
-<div><script src='https://gist.github.com/4467831.js'></script>
-<noscript><pre><code>&lt;html&gt;&lt;body&gt;You are being &lt;a href=&quot;https://github.com/gist/4467831&quot;&gt;redirected&lt;/a&gt;.&lt;/body&gt;&lt;/html&gt;</code></pre></noscript></div>
-
-
-<p> wound up doing it setting the report server and report title in the OnInit method of the web-page. I also bound the selection controls to the available options for the current user and wired up the change event handlers. PostBack events that aren&#8217;t triggered by the selection controls that I added to the web form are ignored by the code behind and the httpHandler for the report viewer control handles the interaction with the SSRS server.</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/08/18/e-star-trade-has-buggy-client-side-javascript/">E*trade Has Buggy Client-side Javascript</a></h1>
+      <h1 class="entry-title">E*trade Has Buggy Client-side Javascript</h1>
     
     
       <p class="meta">
@@ -205,7 +102,7 @@ The ko.click binding doesn’t pass along the actual event. In order for the eve
   </header>
 
 
-  <div class="entry-content"><p>Once a month I get a little reminder that I need to go pay my e*Trade credit card bill. Every month for as long as I can remember I&#8217;ve tried to use their user interface to pay off my current balance and been told by an error dialog that my selection is not valid.</p>
+<div class="entry-content"><p>Once a month I get a little reminder that I need to go pay my e*Trade credit card bill. Every month for as long as I can remember I&#8217;ve tried to use their user interface to pay off my current balance and been told by an error dialog that my selection is not valid.</p>
 
 <p><img src="/images/eTrade_Error.png" alt="Error Message"/></p>
 
@@ -1311,66 +1208,16 @@ Please, don't. https://github.com/styleguide/templates/2.0
 
 <p>One day I&#8217;d like to use that form and be able to click the &#8220;Current Balance&#8221; radio button and have the form submit without reminding me that I&#8217;m using a site with buggy code.</p>
 </div>
-  
-  
 
 
-    </article>
-  
-  
-    <article>
+  <footer>
+    <p class="meta">
       
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/08/05/console-dot-log-anywhere/">console.log Anywhere</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
   
 
+<span class="byline author vcard">Posted by <span class="fn">Barry Forrest</span></span>
 
-<time datetime="2012-08-05T11:46:00-05:00" pubdate data-updated="true">Aug 5<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>My current assingment for <a href="http://www.improvingenterprises.com" target="_blank">Improving Enterprises</a> has me writing much more client-side javascript. I&#8217;m not a javascript ninja, so I lean on the console window to confirm that the script is doing what I expected it to do. This approach works great until I view a page in IE, which has no clue what &#8220;console&#8221; means and acosts me with script error popups.</p>
-
-<p>This finally got annoying enough that I started looking for a universal solution. <a href="http://stackoverflow.com/a/7585409" target="_blank">Stack Overflow</a> to the rescue.  Just so I don&#8217;t have to search high and low for it again, I put a gist on github where it&#8217;s easy for me to find again.</p>
-
-<div><script src='https://gist.github.com/3188643.js'></script>
-<noscript><pre><code>&lt;html&gt;&lt;body&gt;You are being &lt;a href=&quot;https://github.com/gist/3188643&quot;&gt;redirected&lt;/a&gt;.&lt;/body&gt;&lt;/html&gt;</code></pre></noscript></div>
-
-
-<p>Now while I&#8217;m testing things in different browser while developing the scripts, I don&#8217;t have IE complaining about a script error.</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
       
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/04/30/doesnt-play-well-dot-dot-dot/">Doesn&#8217;t Play Well&#8230;</a></h1>
-    
-    
-      <p class="meta">
-        
 
 
 
@@ -1382,421 +1229,40 @@ Please, don't. https://github.com/styleguide/templates/2.0
   
 
 
-<time datetime="2012-04-30T08:25:00-05:00" pubdate data-updated="true">Apr 30<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>I&#8217;ve been working on some &#8220;prototypes&#8221; for a new <a href="http://www.improvingenterprises.com">Improving</a> client. One of our UX people told us to use <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap</a>
-and don&#8217;t look back.</p>
-
-<p>These prototypes are for a data entry focused application, so we&#8217;ve been using the <a href="http://jqueryui.com/demos/autocomplete/#combobox">Autocomplete Combobox</a> to
-help speed things along. I tried to also use the <a href="http://twitter.github.com/bootstrap/javascript.html#buttons">bootstrap-buttons</a> plugin in conjunction with it, but the buttons weren&#8217;t working as expected.</p>
-
-<p>I changed the markup to load the button plugin prior to the jquery ui script and the radio buttons looked and behaved as expected, but the auto complete comboboxes
-looked funky and were no longer acting like text boxes and default to select boxes. When I switched back to loading the jquery ui first, the comboboxes resumed their normal operation.</p>
-
-<p>Lacking the time to get to the very bottom of why these two scripts weren&#8217;t playing nice together, I used a lifeline and got advice from a UX buddy. I was pointed toward the <a href="http://jqueryui.com/demos/button/#radio">button sets</a>
-jquery ui. After changing the markup to use the button sets, everything was playing nicely together.</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
+<time datetime="2012-08-18T08:47:00-05:00" pubdate data-updated="true">Aug 18<span>th</span>, 2012</time>
       
-  <header>
+
+
+    </p>
     
-      <h1 class="entry-title"><a href="/blog/2012/04/22/adding-coderwall-badges/">Adding CoderWall Badges</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
+      <div class="sharing">
   
-
-
-<time datetime="2012-04-22T10:42:00-05:00" pubdate data-updated="true">Apr 22<span>nd</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>I&#8217;ve picked up a few badges via <a href="http://coderwall.com/">CoderWall</a> and I wanted to include them on the blog with the rest of the information in the right side column.</p>
-
-<p>CoderWall has <a href="http://coderwall.com/api">instructions</a> under the sub heading &#8220;Official blog badge&#8221; that detail how to interact with their web api for retrieving badges. My main investigation was how and where to include these snippets within the octopress templates.</p>
-
-<p>The comments included in the Octopress _config.yml were quite helpful. This was exactly the guidance that I needed.</p>
-
-<figure class='code'><figcaption><span>excerpt from _config.yml</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='yaml'><span class='line'><span class="c1"># list each of the sidebar modules you want to include, in the order you want them to appear.</span>
-</span><span class='line'><span class="c1"># To add custom asides, create files in /source/_includes/custom/asides/ and add them to the list like &#39;custom/asides/custom_aside_name.html&#39;</span>
-</span><span class='line'><span class="l-Scalar-Plain">default_asides</span><span class="p-Indicator">:</span> <span class="p-Indicator">[</span><span class="nv">asides/recent_posts.html</span><span class="p-Indicator">,</span> <span class="nv">asides/github.html</span><span class="p-Indicator">,</span> <span class="nv">asides/twitter.html</span><span class="p-Indicator">,</span> <span class="nv">asides/delicious.html</span><span class="p-Indicator">,</span> <span class="nv">asides/pinboard.html</span><span class="p-Indicator">,</span> <span class="nv">asides/googleplus.html</span><span class="p-Indicator">,</span> <span class="nv">custom/asides/coder_wall.html</span><span class="p-Indicator">]</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>So, I was off to the &#8216;custom/asides/&#8217; folder to add a &#8216;coder_all.html&#8217; file. Inside this file, I pasted the snippet from the CoderWall api page, updating it to use my user id.</p>
-
-<script src="https://gist.github.com/1585413.js?file=coderwall_badge_markup.html"></script>
-
-
-<p>I ran thru &#8216;rake generate&#8217; and &#8216;rake preview&#8217; to see my changes in the browser. I was rewarded with absolutely nothing. Sad Panda. So I looked at the Chrome debug console and found the jQuery was not defined.</p>
-
-<p>The internets have taught me to include my script tags near the end of my mark up, I removed the script tag from my aside template. Since Octopress has a footer.html template, I opened that up to include my script tags, ensuring that the jQuery tag was before the CoderWall js file.</p>
-
-<figure class='code'><figcaption><span>script tags</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
-</span><span class='line'><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;http://coderwall.com/javascripts/jquery.coderwall.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>One more time thru the &#8216;rake generate, rake preview&#8217; dance and&#8230; TA-DA! At the bottom of the Aside column I now have CoderWall badges.</p>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://bforrest.com/blog/2012/08/18/e-star-trade-has-buggy-client-side-javascript/" data-via="bforrest30" data-counturl="http://bforrest.com/blog/2012/08/18/e-star-trade-has-buggy-client-side-javascript/" >Tweet</a>
+  
+  
+  
 </div>
-  
-  
 
-
-    </article>
-  
-  
-    <article>
+    
+    <p class="meta">
       
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/04/18/fixed-navigation-bar-with-twitter-bootstrap/">Fixed Navigation Bar With Twitter Bootstrap</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-04-18T15:27:00-05:00" pubdate data-updated="true">Apr 18<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><a href="http://twitter.github.com/bootstrap/index.html">Twitter Bootstrap</a> has many very interesting features available. I really liked their fixed sub navigation menus for the feature pages. As you scroll past the subnavigation, it docs with the top of the scroll window and stays there. It also enables click navigation to other feature sections.</p>
-
-<p>I wanted to have the same functionality for my own html pages, so I started digging around. Looking at the page source, I saw an include for &#8220;/js/application.js&#8221;, which is included in the github source project, but is not part of the downloaded assets. At the top of the file is this nice disclaimer:</p>
-
-<figure class='code'><figcaption><span>Disclaimer</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="c1">// NOTICE!! DO NOT USE ANY OF THIS JAVASCRIPT</span>
-</span><span class='line'><span class="c1">// IT&#39;S ALL JUST JUNK FOR OUR DOCS!</span>
-</span><span class='line'><span class="c1">// ++++++++++++++++++++++++++++++++++++++++++</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>But I discovered that it is not JUST junk, there is a processScroll function that is just what I&#8217;m looking for:</p>
-
-<figure class='code'><figcaption><span>Scroll function and handler wiring</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="c1">// fix sub nav on scroll</span>
-</span><span class='line'>   <span class="kd">var</span> <span class="nx">$win</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="nb">window</span><span class="p">)</span>
-</span><span class='line'>   <span class="p">,</span> <span class="nx">$nav</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.subnav&#39;</span><span class="p">)</span>
-</span><span class='line'>      <span class="p">,</span> <span class="nx">navTop</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.subnav&#39;</span><span class="p">).</span><span class="nx">length</span> <span class="o">&amp;&amp;</span> <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.subnav&#39;</span><span class="p">).</span><span class="nx">offset</span><span class="p">().</span><span class="nx">top</span> <span class="o">-</span> <span class="mi">40</span>
-</span><span class='line'>      <span class="p">,</span> <span class="nx">isFixed</span> <span class="o">=</span> <span class="mi">0</span>
-</span><span class='line'>
-</span><span class='line'>   <span class="nx">processScroll</span><span class="p">()</span>
-</span><span class='line'>
-</span><span class='line'>   <span class="nx">$win</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;scroll&#39;</span><span class="p">,</span> <span class="nx">processScroll</span><span class="p">)</span>
-</span><span class='line'>
-</span><span class='line'>   <span class="kd">function</span> <span class="nx">processScroll</span><span class="p">()</span> <span class="p">{</span>
-</span><span class='line'>      <span class="kd">var</span> <span class="nx">i</span><span class="p">,</span> <span class="nx">scrollTop</span> <span class="o">=</span> <span class="nx">$win</span><span class="p">.</span><span class="nx">scrollTop</span><span class="p">()</span>
-</span><span class='line'>      <span class="k">if</span> <span class="p">(</span><span class="nx">scrollTop</span> <span class="o">&gt;=</span> <span class="nx">navTop</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="nx">isFixed</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>        <span class="nx">isFixed</span> <span class="o">=</span> <span class="mi">1</span>
-</span><span class='line'>        <span class="nx">$nav</span><span class="p">.</span><span class="nx">addClass</span><span class="p">(</span><span class="s1">&#39;subnav-fixed&#39;</span><span class="p">)</span>
-</span><span class='line'>      <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">scrollTop</span> <span class="o">&lt;=</span> <span class="nx">navTop</span> <span class="o">&amp;&amp;</span> <span class="nx">isFixed</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>        <span class="nx">isFixed</span> <span class="o">=</span> <span class="mi">0</span>
-</span><span class='line'>        <span class="nx">$nav</span><span class="p">.</span><span class="nx">removeClass</span><span class="p">(</span><span class="s1">&#39;subnav-fixed&#39;</span><span class="p">)</span>
-</span><span class='line'>      <span class="p">}</span>
-</span><span class='line'>   <span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>This wires the processScroll() function to the window scroll event and toggles the navigation element based on where it rests relative to the viewport. The idea being to add the &#8216;subnav-fixed&#8217; CSS class to keep the element within the viewport.</p>
-
-<p>Attached to the body tag was the first bit of markup that I needed to see:</p>
-
-<figure class='code'><figcaption><span>Page Markup</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;body</span> <span class="na">data-spy=</span><span class="s">&quot;scroll&quot;</span> <span class="na">data-target=</span><span class="s">&quot;.subnav&quot;</span> <span class="na">data-offset=</span><span class="s">&quot;50&quot;</span><span class="nt">&gt;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>The navigation div tags contained the rest of the information:</p>
-
-<figure class='code'><figcaption><span>Navigation markup</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;subnav&quot;</span><span class="nt">&gt;</span>
-</span><span class='line'>      <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#labels&quot;</span><span class="nt">&gt;</span>Labels<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-</span><span class='line'>      <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#badges&quot;</span><span class="nt">&gt;</span>Badges<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-</span><span class='line'><span class="nt">&lt;/div&gt;</span>
-</span><span class='line'><span class="c">&lt;!-- along with page sections with matching id values --&gt;</span>
-</span><span class='line'><span class="nt">&lt;section</span> <span class="na">id=</span><span class="s">&quot;labels&quot;</span><span class="nt">&gt;</span>label information<span class="nt">&lt;/section&gt;</span>
-</span><span class='line'><span class="nt">&lt;section</span> <span class="na">id=</span><span class="s">&quot;badges&quot;</span><span class="nt">&gt;</span>badge information<span class="nt">&lt;/section&gt;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>By annotating the body tag with the data- attribute of &#8220;data-spy&#8221;, identifying sectional elements with id value and including the
-<a href="http://twitter.github.com/bootstrap/javascript.html#scrollspy">Scrollspy</a> JavaScript plugin, we are able to synchronize the active menu item with the section that is topmost within the viewport.</p>
-
-<p>Now on my // TODO: list is to trick up the blog template to keep it&#8217;s top navigation bar fixed along the top&#8230;</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
+        <a class="basic-alignment left" href="/blog/2012/08/05/console-dot-log-anywhere/" title="Previous Post: console.log anywhere">&laquo; console.log anywhere</a>
       
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/04/16/everything-old-is-new-again/">Everything Old Is New Again</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-04-16T11:56:00-05:00" pubdate data-updated="true">Apr 16<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>I spent some time over the weekend dragging along old posts from my tumblr blog that deal with programming. I didn&#8217;t bother with the instagram pictures or the four square checkins. After a few failed attempts to get the tumblr posts where the were suposed to be, I opted to stash them in a working directory and move them by hand.</p>
-
-<p>Now all of my <code>&lt;scarcasm&gt;</code>glorious code related posts<code>&lt;/sarcasm&gt;</code> are in one place, it&#8217;s time to dust up some posts about my shiny new play things <a href="http://twitter.github.com/bootstrap/" title="">Twitter Bootstrasp</a> <a href="https://octopress.org">Octopress</a> and <a href="http://daringfireball.net/projects/markdown/syntax" title="">Markdown</a>. Stand by for more intesting things in the very near future.</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
       
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/04/13/that-was-easy/">That Was Easy</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-04-13T07:18:00-05:00" pubdate data-updated="true">Apr 13<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><h2>Taking the Octopress plunge</h2>
-
-<p>Last night I took the plunge and set up <a href="http://octopress.org/">octopress</a> to host a <a href="http://bforrest.github.com">blog on github</a> using github pages. The documentation on octopress.org is impeccable. My only hic-up was not fully understanding that I need to run</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>rake generate
-</span><span class='line'>rake deploy</span></code></pre></td></tr></table></div></figure>
-
-
-<p>after committing and pushing from my source branch.</p>
-
-<p>Now to have some fun learning <a href="http://daringfireball.net/projects/markdown/">markdown</a> and how to style this so that it doesn&#8217;t look like everyone else&#8217;s octopress blog</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
+        <a class="basic-alignment right" href="/blog/2013/01/07/til-equals-%3E-reportviewer-control/" title="Next Post: TIL => ReportViewer Control, Less is More">TIL => ReportViewer Control, Less is More &raquo;</a>
       
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/02/27/Programming-and-Barriers-to-Entry/">Programming & Barriers to Entry</a></h1>
-    
-    
-      <p class="meta">
-        
+    </p>
+  </footer>
+</article>
 
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-02-27T00:00:00-06:00" pubdate data-updated="true">Feb 27<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>A <a href="https://twitter.com/#!/coridrew">fellow learner</a> has posted <a href="http://truncatedcodr.wordpress.com/2012/01/25/programming-barriers-to-entry/">&#8220;Programming &amp; Barriers to Entry&#8221;</a>. Cori has much to say in this article concentrated around command line tools, vim and Ruby. I&#8217;d like to comment on some of the perceptions and share my own opinions.</p>
-
-<h3>Command Line</h3>
-
-
-<p>I picked up on some discord with regard to this type of interaction.</p>
-
-<blockquote>
-
-&#8230;Intellisense (or lack thereof).  Ctrl-spacebar is my friend. It’s what I’ve grown to love. Typing /?—&gt;enter—&gt;up-arrow—&gt;space—&gt;command-I-really-need is a bit of a PITA. It feels like a clunky waste of time.
-
-</blockquote>
-
-
-<p>Aren&#8217;t these the same type of interaction? CTL+Space pops up a list of available commands, arrow up/down to select and hit enter to paste that text into the window. Granted Intellisense is more polished and will show all of the overloads, but I honestly have a difficult time understanding the difference.</p>
-
-<p><a href="http://gitimmersion.com">Git Immersion</a> was very helpful for ramping up quickly with Git. Git is just a plate full of awesome. I can get tons done with four basic commands after I can Alt+Tab to  my bash shell:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>git checkout -b working_branch #separates my code from the herd.
-</span><span class='line'>
-</span><span class='line'>git status #to see all of the files that I've modified since my last checkin. 
-</span><span class='line'>
-</span><span class='line'>git add . #readies them to be committed to the local repository.
-</span><span class='line'>
-</span><span class='line'>git commit -m &#8216;checkin comment&#8217; #stores them away. </span></code></pre></td></tr></table></div></figure>
-
-
-<p>I don&#8217;t have to right-click anything! Since I&#8217;m working locally, I&#8217;m not at the mercy of a flaky connection to a central server. When I want to diff files, that happens locally too.</p>
-
-<p>I&#8217;ve got BeyondCompare set up so in the bach shell I can use</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>git difftool </span></code></pre></td></tr></table></div></figure>
-
-
-<p>and then roll through all of the files that I&#8217;ve changed and it&#8217;s pretty snappy.</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>gitk all</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Shows the entire history of the repository</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>gitk filename</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Will do the same for a single file.</p>
-
-<p>There is a git gui as well as  <a href="http://code.google.com/p/tortoisegit/">Tortoise Git</a> to go along with Caleb&#8217;s favorite.</p>
-
-<h3>VIM</h3>
-
-
-<p>It is a very powerful text editor. It really is language agnostic and enables development in a huge variety of languages. Visual Studio, not so much. I started fooling with VIM when I started doing the Ruby Koans. I stumbled through the help tutorial a few times over several months and got the hang of using VIM for navigating documents with the home row keys and pattern matching searches. I try to use it when I&#8217;m not doing .net development, but I&#8217;m still staying in the shallow end of the pool. I&#8217;m still much more comfortable navigating a C# project with Resharper/CodeRush inside VS than I think I&#8217;ll ever be with VIM, but VS has a 10 year head start.</p>
-
-<h3>Ruby and Macs</h3>
-
-
-<p>There seems to be a strong correlation between Macs and Ruby developers among <a href="http://dallashackclub.com/" target="_blank">Hack Club</a> attendees. Many of the folks who attend do own Macs. <a href="http://improvingenterprises.com/" target="_blank">Improving Enterprises</a>, my employer and sponsor of many wonderful user groups, has an amazing employee purchase plan for computers and many of the consultants take full advantage of that benefit. Several of the Macs at Hack Club are running Windows 7 in native mode and many more are running Windows 7 via VMWare Fusion of Parallels.</p>
-
-<p>I&#8217;d hazard a guess that <a href="ttp://twitter.com/gregvaughn" target="_blank">Greg Vaughn</a> is in the minority and using Ruby in OSX. <a href="http://twitter.com/amirrajan" target="_blank">Amir</a> boots to Windows natively via BootCamp and I believe does all of his Ruby development under Windows. I&#8217;ve installed Ruby 1.9 in my VMWare instance and use Growl For Windows and a ruby command prompt for SpecWatchr when I&#8217;m deliberately practicing BDD through the beauty of <a href="http://www.nspec.org/about" target="_blank">NSpec</a>. Ruby in this group is more about learning something new since most of the crew work in .net for paychecks.</p>
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 </div>
-  
-  
+  </section>
 
-
-    </article>
-  
-  <div class="pagination">
-    
-      <a class="prev" href="/blog/page/2/">&larr; Older</a>
-    
-    <a href="/blog/archives">Blog Archives</a>
-    
-  </div>
 </div>
+
 <aside class="sidebar">
   
     <section>
@@ -1820,7 +1286,7 @@ jquery ui. After changing the markup to use the button sets, everything was play
       </li>
     
       <li class="post">
-        <a href="/blog/2012/04/30/doesnt-play-well-dot-dot-dot/">Doesn&#8217;t Play Well&#8230;</a>
+        <a href="/blog/2012/04/30/doesnt-play-well-dot-dot-dot/">Doesn't Play Well...</a>
       </li>
     
   </ul>
@@ -1829,7 +1295,7 @@ jquery ui. After changing the markup to use the button sets, everything was play
 <section>
   <h1>GitHub Repos</h1>
   <ul id="gh_repos">
-    <li class="loading">Status updating&#8230;</li>
+    <li class="loading">Status updating...</li>
   </ul>
   
   <a href="https://github.com/bforrest">@bforrest</a> on GitHub
@@ -1859,7 +1325,7 @@ jquery ui. After changing the markup to use the button sets, everything was play
 <section>
   <h1>Latest Tweets</h1>
   <ul id="tweets">
-    <li class="loading">Status updating&#8230;</li>
+    <li class="loading">Status updating...</li>
   </ul>
   <script type="text/javascript">
     $.domReady(function(){
@@ -1881,6 +1347,7 @@ jquery ui. After changing the markup to use the button sets, everything was play
 
   
 </aside>
+
 
     </div>
   </div>
@@ -1925,7 +1392,10 @@ jquery ui. After changing the markup to use the button sets, everything was play
       var disqus_shortname = 'bforrest-github-com';
       
         
-        var disqus_script = 'count.js';
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://bforrest.com/blog/2012/08/18/e-star-trade-has-buggy-client-side-javascript/';
+        var disqus_url = 'http://bforrest.com/blog/2012/08/18/e-star-trade-has-buggy-client-side-javascript/';
+        var disqus_script = 'embed.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
