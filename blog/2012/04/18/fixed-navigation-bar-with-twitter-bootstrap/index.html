@@ -18,13 +18,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://bforrest.com/blog/2012/04/18/fixed-navigation-bar-with-twitter-bootstrap/">
+  <link rel="canonical" href="http://bforrest.github.com/blog/2012/04/18/fixed-navigation-bar-with-twitter-bootstrap">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
-  <script src="/javascripts/modernizr-2.0.js"></script>
-  <script src="/javascripts/ender.js"></script>
-  <script src="/javascripts/octopress.js" type="text/javascript"></script>
   <link href="/atom.xml" rel="alternate" title="Improving Me" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
   <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
 <link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
 <link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
@@ -61,7 +62,7 @@
   
 <form action="http://google.com/search" method="get">
   <fieldset role="search">
-    <input type="hidden" name="q" value="site:bforrest.com" />
+    <input type="hidden" name="q" value="site:bforrest.github.com" />
     <input class="search" type="text" name="q" results="0" placeholder="Search"/>
   </fieldset>
 </form>
@@ -104,7 +105,7 @@
 
 <div class="entry-content"><p><a href="http://twitter.github.com/bootstrap/index.html">Twitter Bootstrap</a> has many very interesting features available. I really liked their fixed sub navigation menus for the feature pages. As you scroll past the subnavigation, it docs with the top of the scroll window and stays there. It also enables click navigation to other feature sections.</p>
 
-<p>I wanted to have the same functionality for my own html pages, so I started digging around. Looking at the page source, I saw an include for &#8220;/js/application.js&#8221;, which is included in the github source project, but is not part of the downloaded assets. At the top of the file is this nice disclaimer:</p>
+<p>I wanted to have the same functionality for my own html pages, so I started digging around. Looking at the page source, I saw an include for &ldquo;/js/application.js&rdquo;, which is included in the github source project, but is not part of the downloaded assets. At the top of the file is this nice disclaimer:</p>
 
 <figure class='code'><figcaption><span>Disclaimer</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -115,7 +116,7 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>But I discovered that it is not JUST junk, there is a processScroll function that is just what I&#8217;m looking for:</p>
+<p>But I discovered that it is not JUST junk, there is a processScroll function that is just what I&rsquo;m looking for:</p>
 
 <figure class='code'><figcaption><span>Scroll function and handler wiring</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -160,7 +161,7 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>This wires the processScroll() function to the window scroll event and toggles the navigation element based on where it rests relative to the viewport. The idea being to add the &#8216;subnav-fixed&#8217; CSS class to keep the element within the viewport.</p>
+<p>This wires the processScroll() function to the window scroll event and toggles the navigation element based on where it rests relative to the viewport. The idea being to add the &lsquo;subnav-fixed&rsquo; CSS class to keep the element within the viewport.</p>
 
 <p>Attached to the body tag was the first bit of markup that I needed to see:</p>
 
@@ -188,10 +189,10 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>By annotating the body tag with the data- attribute of &#8220;data-spy&#8221;, identifying sectional elements with id value and including the
+<p>By annotating the body tag with the data- attribute of &ldquo;data-spy&rdquo;, identifying sectional elements with id value and including the
 <a href="http://twitter.github.com/bootstrap/javascript.html#scrollspy">Scrollspy</a> JavaScript plugin, we are able to synchronize the active menu item with the section that is topmost within the viewport.</p>
 
-<p>Now on my // TODO: list is to trick up the blog template to keep it&#8217;s top navigation bar fixed along the top&#8230;</p>
+<p>Now on my // TODO: list is to trick up the blog template to keep it&rsquo;s top navigation bar fixed along the top&hellip;</p>
 </div>
 
 
@@ -228,7 +229,7 @@
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://bforrest.com/blog/2012/04/18/fixed-navigation-bar-with-twitter-bootstrap/" data-via="bforrest30" data-counturl="http://bforrest.com/blog/2012/04/18/fixed-navigation-bar-with-twitter-bootstrap/" >Tweet</a>
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://bforrest.github.com/blog/2012/04/18/fixed-navigation-bar-with-twitter-bootstrap/" data-via="bforrest30" data-counturl="http://bforrest.github.com/blog/2012/04/18/fixed-navigation-bar-with-twitter-bootstrap/" >Tweet</a>
   
   
   
@@ -265,15 +266,15 @@
       </li>
     
       <li class="post">
-        <a href="/blog/2013/01/07/til-equals-%3E-reportviewer-control/">TIL => ReportViewer Control, Less is More</a>
+        <a href="/blog/2013/01/07/til-equals-%3E-reportviewer-control/">TIL => ReportViewer Control, Less Is More</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2012/08/18/e-star-trade-has-buggy-client-side-javascript/">e*trade has buggy client-side javascript</a>
+        <a href="/blog/2012/08/18/e-star-trade-has-buggy-client-side-javascript/">E*trade Has Buggy Client-side Javascript</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2012/08/05/console-dot-log-anywhere/">console.log anywhere</a>
+        <a href="/blog/2012/08/05/console-dot-log-anywhere/">console.log Anywhere</a>
       </li>
     
       <li class="post">
@@ -292,7 +293,7 @@
   <a href="https://github.com/bforrest">@bforrest</a> on GitHub
   
   <script type="text/javascript">
-    $.domReady(function(){
+    $(document).ready(function(){
         if (!window.jXHR){
             var jxhr = document.createElement('script');
             jxhr.type = 'text/javascript';
@@ -384,13 +385,13 @@
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://bforrest.com/blog/2012/04/18/fixed-navigation-bar-with-twitter-bootstrap/';
-        var disqus_url = 'http://bforrest.com/blog/2012/04/18/fixed-navigation-bar-with-twitter-bootstrap/';
+        var disqus_identifier = 'http://bforrest.github.com/blog/2012/04/18/fixed-navigation-bar-with-twitter-bootstrap/';
+        var disqus_url = 'http://bforrest.github.com/blog/2012/04/18/fixed-navigation-bar-with-twitter-bootstrap/';
         var disqus_script = 'embed.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
       (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     }());
 </script>
@@ -406,7 +407,7 @@
       var twitterWidgets = document.createElement('script');
       twitterWidgets.type = 'text/javascript';
       twitterWidgets.async = true;
-      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
       document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
     })();
   </script>

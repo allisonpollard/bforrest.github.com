@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>console.log anywhere - Improving Me</title>
+  <title>console.log Anywhere - Improving Me</title>
   <meta name="author" content="Barry Forrest">
 
   
-  <meta name="description" content="My current assingment for Improving Enterprises has me writing much more client-side javascript. I&#8217;m not a javascript ninja, so I lean on the &hellip;">
+  <meta name="description" content="My current assingment for Improving Enterprises has me writing much more client-side javascript. I&rsquo;m not a javascript ninja, so I lean on the &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,13 +18,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://bforrest.com/blog/2012/08/05/console-dot-log-anywhere/">
+  <link rel="canonical" href="http://bforrest.github.com/blog/2012/08/05/console-dot-log-anywhere">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
-  <script src="/javascripts/modernizr-2.0.js"></script>
-  <script src="/javascripts/ender.js"></script>
-  <script src="/javascripts/octopress.js" type="text/javascript"></script>
   <link href="/atom.xml" rel="alternate" title="Improving Me" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
   <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
 <link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
 <link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
@@ -61,7 +62,7 @@
   
 <form action="http://google.com/search" method="get">
   <fieldset role="search">
-    <input type="hidden" name="q" value="site:bforrest.com" />
+    <input type="hidden" name="q" value="site:bforrest.github.com" />
     <input class="search" type="text" name="q" results="0" placeholder="Search"/>
   </fieldset>
 </form>
@@ -102,15 +103,24 @@
   </header>
 
 
-<div class="entry-content"><p>My current assingment for <a href="http://www.improvingenterprises.com" target="_blank">Improving Enterprises</a> has me writing much more client-side javascript. I&#8217;m not a javascript ninja, so I lean on the console window to confirm that the script is doing what I expected it to do. This approach works great until I view a page in IE, which has no clue what &#8220;console&#8221; means and acosts me with script error popups.</p>
+<div class="entry-content"><p>My current assingment for <a href="http://www.improvingenterprises.com" target="_blank">Improving Enterprises</a> has me writing much more client-side javascript. I&rsquo;m not a javascript ninja, so I lean on the console window to confirm that the script is doing what I expected it to do. This approach works great until I view a page in IE, which has no clue what &ldquo;console&rdquo; means and acosts me with script error popups.</p>
 
-<p>This finally got annoying enough that I started looking for a universal solution. <a href="http://stackoverflow.com/a/7585409" target="_blank">Stack Overflow</a> to the rescue.  Just so I don&#8217;t have to search high and low for it again, I put a gist on github where it&#8217;s easy for me to find again.</p>
+<p>This finally got annoying enough that I started looking for a universal solution. <a href="http://stackoverflow.com/a/7585409" target="_blank">Stack Overflow</a> to the rescue.  Just so I don&rsquo;t have to search high and low for it again, I put a gist on github where it&rsquo;s easy for me to find again.</p>
 
 <div><script src='https://gist.github.com/3188643.js'></script>
-<noscript><pre><code>&lt;html&gt;&lt;body&gt;You are being &lt;a href=&quot;https://github.com/gist/3188643&quot;&gt;redirected&lt;/a&gt;.&lt;/body&gt;&lt;/html&gt;</code></pre></noscript></div>
+<noscript><pre><code>if (!window.console) {
+    (function() {
+      var names = [&quot;log&quot;, &quot;debug&quot;, &quot;info&quot;, &quot;warn&quot;, &quot;error&quot;, &quot;assert&quot;, &quot;dir&quot;, &quot;dirxml&quot;,
+      &quot;group&quot;, &quot;groupEnd&quot;, &quot;time&quot;, &quot;timeEnd&quot;, &quot;count&quot;, &quot;trace&quot;, &quot;profile&quot;, &quot;profileEnd&quot;];
+      window.console = {};
+      for (var i = 0; i &lt; names.length; ++i) {
+        window.console[names[i]] = function() {};
+      }
+    }());
+  }</code></pre></noscript></div>
 
 
-<p>Now while I&#8217;m testing things in different browser while developing the scripts, I don&#8217;t have IE complaining about a script error.</p>
+<p>Now while I&rsquo;m testing things in different browser while developing the scripts, I don&rsquo;t have IE complaining about a script error.</p>
 </div>
 
 
@@ -141,7 +151,7 @@
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://bforrest.com/blog/2012/08/05/console-dot-log-anywhere/" data-via="bforrest30" data-counturl="http://bforrest.com/blog/2012/08/05/console-dot-log-anywhere/" >Tweet</a>
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://bforrest.github.com/blog/2012/08/05/console-dot-log-anywhere/" data-via="bforrest30" data-counturl="http://bforrest.github.com/blog/2012/08/05/console-dot-log-anywhere/" >Tweet</a>
   
   
   
@@ -178,15 +188,15 @@
       </li>
     
       <li class="post">
-        <a href="/blog/2013/01/07/til-equals-%3E-reportviewer-control/">TIL => ReportViewer Control, Less is More</a>
+        <a href="/blog/2013/01/07/til-equals-%3E-reportviewer-control/">TIL => ReportViewer Control, Less Is More</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2012/08/18/e-star-trade-has-buggy-client-side-javascript/">e*trade has buggy client-side javascript</a>
+        <a href="/blog/2012/08/18/e-star-trade-has-buggy-client-side-javascript/">E*trade Has Buggy Client-side Javascript</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2012/08/05/console-dot-log-anywhere/">console.log anywhere</a>
+        <a href="/blog/2012/08/05/console-dot-log-anywhere/">console.log Anywhere</a>
       </li>
     
       <li class="post">
@@ -205,7 +215,7 @@
   <a href="https://github.com/bforrest">@bforrest</a> on GitHub
   
   <script type="text/javascript">
-    $.domReady(function(){
+    $(document).ready(function(){
         if (!window.jXHR){
             var jxhr = document.createElement('script');
             jxhr.type = 'text/javascript';
@@ -297,13 +307,13 @@
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://bforrest.com/blog/2012/08/05/console-dot-log-anywhere/';
-        var disqus_url = 'http://bforrest.com/blog/2012/08/05/console-dot-log-anywhere/';
+        var disqus_identifier = 'http://bforrest.github.com/blog/2012/08/05/console-dot-log-anywhere/';
+        var disqus_url = 'http://bforrest.github.com/blog/2012/08/05/console-dot-log-anywhere/';
         var disqus_script = 'embed.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
       (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     }());
 </script>
@@ -319,7 +329,7 @@
       var twitterWidgets = document.createElement('script');
       twitterWidgets.type = 'text/javascript';
       twitterWidgets.async = true;
-      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
       document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
     })();
   </script>

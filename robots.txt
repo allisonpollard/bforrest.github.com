@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: 
 
-Sitemap: http://bforrest.com/sitemap.xml 
+Sitemap: http://bforrest.github.com/sitemap.xml 

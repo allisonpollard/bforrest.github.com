@@ -18,13 +18,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://bforrest.com/blog/2014/01/05/til-equals-%3E-til-knockoutjs/">
+  <link rel="canonical" href="http://bforrest.github.com/blog/2014/01/05/til-equals-%3E-til-knockoutjs">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
-  <script src="/javascripts/modernizr-2.0.js"></script>
-  <script src="/javascripts/ender.js"></script>
-  <script src="/javascripts/octopress.js" type="text/javascript"></script>
   <link href="/atom.xml" rel="alternate" title="Improving Me" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
   <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
 <link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
 <link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
@@ -61,7 +62,7 @@
   
 <form action="http://google.com/search" method="get">
   <fieldset role="search">
-    <input type="hidden" name="q" value="site:bforrest.com" />
+    <input type="hidden" name="q" value="site:bforrest.github.com" />
     <input class="search" type="text" name="q" results="0" placeholder="Search"/>
   </fieldset>
 </form>
@@ -108,7 +109,7 @@
 
 <p>The ko click binding was one of those things. I was trying to listen for a click event for on a checkbox and do some fancy css swapping to highlight the user’s selection. Changing the styles worked smooth as butter, but the box remained unchecked.</p>
 
-<p>After several refreshes of the page, still no check in the box. The knockoutJS documentation covers this case - it is clearly noted as
+<p>After several refreshes of the page, still no check in the box. The knockoutJS documentation covers this case &ndash; it is clearly noted as
 Note 3: Allowing the default click action
 The ko.click binding doesn’t pass along the actual event. In order for the event to bubble, the bound function must return ‘true’.</p>
 
@@ -143,7 +144,7 @@ The ko.click binding doesn’t pass along the actual event. In order for the eve
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://bforrest.com/blog/2014/01/05/til-equals-%3E-til-knockoutjs/" data-via="bforrest30" data-counturl="http://bforrest.com/blog/2014/01/05/til-equals-%3E-til-knockoutjs/" >Tweet</a>
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://bforrest.github.com/blog/2014/01/05/til-equals-%3E-til-knockoutjs/" data-via="bforrest30" data-counturl="http://bforrest.github.com/blog/2014/01/05/til-equals-%3E-til-knockoutjs/" >Tweet</a>
   
   
   
@@ -178,15 +179,15 @@ The ko.click binding doesn’t pass along the actual event. In order for the eve
       </li>
     
       <li class="post">
-        <a href="/blog/2013/01/07/til-equals-%3E-reportviewer-control/">TIL => ReportViewer Control, Less is More</a>
+        <a href="/blog/2013/01/07/til-equals-%3E-reportviewer-control/">TIL => ReportViewer Control, Less Is More</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2012/08/18/e-star-trade-has-buggy-client-side-javascript/">e*trade has buggy client-side javascript</a>
+        <a href="/blog/2012/08/18/e-star-trade-has-buggy-client-side-javascript/">E*trade Has Buggy Client-side Javascript</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2012/08/05/console-dot-log-anywhere/">console.log anywhere</a>
+        <a href="/blog/2012/08/05/console-dot-log-anywhere/">console.log Anywhere</a>
       </li>
     
       <li class="post">
@@ -205,7 +206,7 @@ The ko.click binding doesn’t pass along the actual event. In order for the eve
   <a href="https://github.com/bforrest">@bforrest</a> on GitHub
   
   <script type="text/javascript">
-    $.domReady(function(){
+    $(document).ready(function(){
         if (!window.jXHR){
             var jxhr = document.createElement('script');
             jxhr.type = 'text/javascript';
@@ -297,13 +298,13 @@ The ko.click binding doesn’t pass along the actual event. In order for the eve
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://bforrest.com/blog/2014/01/05/til-equals-%3E-til-knockoutjs/';
-        var disqus_url = 'http://bforrest.com/blog/2014/01/05/til-equals-%3E-til-knockoutjs/';
+        var disqus_identifier = 'http://bforrest.github.com/blog/2014/01/05/til-equals-%3E-til-knockoutjs/';
+        var disqus_url = 'http://bforrest.github.com/blog/2014/01/05/til-equals-%3E-til-knockoutjs/';
         var disqus_script = 'embed.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
       (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     }());
 </script>
@@ -319,7 +320,7 @@ The ko.click binding doesn’t pass along the actual event. In order for the eve
       var twitterWidgets = document.createElement('script');
       twitterWidgets.type = 'text/javascript';
       twitterWidgets.async = true;
-      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
       document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
     })();
   </script>

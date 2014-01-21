@@ -9,7 +9,7 @@
   <meta name="author" content="Barry Forrest">
 
   
-  <meta name="description" content="I&#8217;ve picked up a few badges via CoderWall and I wanted to include them on the blog with the rest of the information in the right side column. &hellip;">
+  <meta name="description" content="I&rsquo;ve picked up a few badges via CoderWall and I wanted to include them on the blog with the rest of the information in the right side column. &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,13 +18,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://bforrest.com/blog/2012/04/22/adding-coderwall-badges/">
+  <link rel="canonical" href="http://bforrest.github.com/blog/2012/04/22/adding-coderwall-badges">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
-  <script src="/javascripts/modernizr-2.0.js"></script>
-  <script src="/javascripts/ender.js"></script>
-  <script src="/javascripts/octopress.js" type="text/javascript"></script>
   <link href="/atom.xml" rel="alternate" title="Improving Me" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
   <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
 <link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
 <link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
@@ -61,7 +62,7 @@
   
 <form action="http://google.com/search" method="get">
   <fieldset role="search">
-    <input type="hidden" name="q" value="site:bforrest.com" />
+    <input type="hidden" name="q" value="site:bforrest.github.com" />
     <input class="search" type="text" name="q" results="0" placeholder="Search"/>
   </fieldset>
 </form>
@@ -102,9 +103,9 @@
   </header>
 
 
-<div class="entry-content"><p>I&#8217;ve picked up a few badges via <a href="http://coderwall.com/">CoderWall</a> and I wanted to include them on the blog with the rest of the information in the right side column.</p>
+<div class="entry-content"><p>I&rsquo;ve picked up a few badges via <a href="http://coderwall.com/">CoderWall</a> and I wanted to include them on the blog with the rest of the information in the right side column.</p>
 
-<p>CoderWall has <a href="http://coderwall.com/api">instructions</a> under the sub heading &#8220;Official blog badge&#8221; that detail how to interact with their web api for retrieving badges. My main investigation was how and where to include these snippets within the octopress templates.</p>
+<p>CoderWall has <a href="http://coderwall.com/api">instructions</a> under the sub heading &ldquo;Official blog badge&rdquo; that detail how to interact with their web api for retrieving badges. My main investigation was how and where to include these snippets within the octopress templates.</p>
 
 <p>The comments included in the Octopress _config.yml were quite helpful. This was exactly the guidance that I needed.</p>
 
@@ -117,12 +118,12 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>So, I was off to the &#8216;custom/asides/&#8217; folder to add a &#8216;coder_all.html&#8217; file. Inside this file, I pasted the snippet from the CoderWall api page, updating it to use my user id.</p>
+<p>So, I was off to the &lsquo;custom/asides/&rsquo; folder to add a &lsquo;coder_all.html&rsquo; file. Inside this file, I pasted the snippet from the CoderWall api page, updating it to use my user id.</p>
 
 <script src="https://gist.github.com/1585413.js?file=coderwall_badge_markup.html"></script>
 
 
-<p>I ran thru &#8216;rake generate&#8217; and &#8216;rake preview&#8217; to see my changes in the browser. I was rewarded with absolutely nothing. Sad Panda. So I looked at the Chrome debug console and found the jQuery was not defined.</p>
+<p>I ran thru &lsquo;rake generate&rsquo; and &lsquo;rake preview&rsquo; to see my changes in the browser. I was rewarded with absolutely nothing. Sad Panda. So I looked at the Chrome debug console and found the jQuery was not defined.</p>
 
 <p>The internets have taught me to include my script tags near the end of my mark up, I removed the script tag from my aside template. Since Octopress has a footer.html template, I opened that up to include my script tags, ensuring that the jQuery tag was before the CoderWall js file.</p>
 
@@ -133,7 +134,7 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>One more time thru the &#8216;rake generate, rake preview&#8217; dance and&#8230; TA-DA! At the bottom of the Aside column I now have CoderWall badges.</p>
+<p>One more time thru the &lsquo;rake generate, rake preview&rsquo; dance and&hellip; TA-DA! At the bottom of the Aside column I now have CoderWall badges.</p>
 </div>
 
 
@@ -164,7 +165,7 @@
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://bforrest.com/blog/2012/04/22/adding-coderwall-badges/" data-via="bforrest30" data-counturl="http://bforrest.com/blog/2012/04/22/adding-coderwall-badges/" >Tweet</a>
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://bforrest.github.com/blog/2012/04/22/adding-coderwall-badges/" data-via="bforrest30" data-counturl="http://bforrest.github.com/blog/2012/04/22/adding-coderwall-badges/" >Tweet</a>
   
   
   
@@ -201,15 +202,15 @@
       </li>
     
       <li class="post">
-        <a href="/blog/2013/01/07/til-equals-%3E-reportviewer-control/">TIL => ReportViewer Control, Less is More</a>
+        <a href="/blog/2013/01/07/til-equals-%3E-reportviewer-control/">TIL => ReportViewer Control, Less Is More</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2012/08/18/e-star-trade-has-buggy-client-side-javascript/">e*trade has buggy client-side javascript</a>
+        <a href="/blog/2012/08/18/e-star-trade-has-buggy-client-side-javascript/">E*trade Has Buggy Client-side Javascript</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2012/08/05/console-dot-log-anywhere/">console.log anywhere</a>
+        <a href="/blog/2012/08/05/console-dot-log-anywhere/">console.log Anywhere</a>
       </li>
     
       <li class="post">
@@ -228,7 +229,7 @@
   <a href="https://github.com/bforrest">@bforrest</a> on GitHub
   
   <script type="text/javascript">
-    $.domReady(function(){
+    $(document).ready(function(){
         if (!window.jXHR){
             var jxhr = document.createElement('script');
             jxhr.type = 'text/javascript';
@@ -320,13 +321,13 @@
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://bforrest.com/blog/2012/04/22/adding-coderwall-badges/';
-        var disqus_url = 'http://bforrest.com/blog/2012/04/22/adding-coderwall-badges/';
+        var disqus_identifier = 'http://bforrest.github.com/blog/2012/04/22/adding-coderwall-badges/';
+        var disqus_url = 'http://bforrest.github.com/blog/2012/04/22/adding-coderwall-badges/';
         var disqus_script = 'embed.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
       (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     }());
 </script>
@@ -342,7 +343,7 @@
       var twitterWidgets = document.createElement('script');
       twitterWidgets.type = 'text/javascript';
       twitterWidgets.async = true;
-      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
       document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
     })();
   </script>

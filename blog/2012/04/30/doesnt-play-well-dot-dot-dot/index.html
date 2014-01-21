@@ -9,8 +9,8 @@
   <meta name="author" content="Barry Forrest">
 
   
-  <meta name="description" content="I&#8217;ve been working on some &#8220;prototypes&#8221; for a new Improving client. One of our UX people told us to use Twitter Bootstrap
-and don&# &hellip;">
+  <meta name="description" content="I&rsquo;ve been working on some &ldquo;prototypes&rdquo; for a new Improving client. One of our UX people told us to use Twitter Bootstrap
+and don& &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -19,13 +19,14 @@ and don&# &hellip;">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://bforrest.com/blog/2012/04/30/doesnt-play-well-dot-dot-dot/">
+  <link rel="canonical" href="http://bforrest.github.com/blog/2012/04/30/doesnt-play-well-dot-dot-dot">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
-  <script src="/javascripts/modernizr-2.0.js"></script>
-  <script src="/javascripts/ender.js"></script>
-  <script src="/javascripts/octopress.js" type="text/javascript"></script>
   <link href="/atom.xml" rel="alternate" title="Improving Me" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
   <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
 <link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
 <link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
@@ -62,7 +63,7 @@ and don&# &hellip;">
   
 <form action="http://google.com/search" method="get">
   <fieldset role="search">
-    <input type="hidden" name="q" value="site:bforrest.com" />
+    <input type="hidden" name="q" value="site:bforrest.github.com" />
     <input class="search" type="text" name="q" results="0" placeholder="Search"/>
   </fieldset>
 </form>
@@ -103,16 +104,16 @@ and don&# &hellip;">
   </header>
 
 
-<div class="entry-content"><p>I&#8217;ve been working on some &#8220;prototypes&#8221; for a new <a href="http://www.improvingenterprises.com">Improving</a> client. One of our UX people told us to use <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap</a>
-and don&#8217;t look back.</p>
+<div class="entry-content"><p>I&rsquo;ve been working on some &ldquo;prototypes&rdquo; for a new <a href="http://www.improvingenterprises.com">Improving</a> client. One of our UX people told us to use <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap</a>
+and don&rsquo;t look back.</p>
 
-<p>These prototypes are for a data entry focused application, so we&#8217;ve been using the <a href="http://jqueryui.com/demos/autocomplete/#combobox">Autocomplete Combobox</a> to
-help speed things along. I tried to also use the <a href="http://twitter.github.com/bootstrap/javascript.html#buttons">bootstrap-buttons</a> plugin in conjunction with it, but the buttons weren&#8217;t working as expected.</p>
+<p>These prototypes are for a data entry focused application, so we&rsquo;ve been using the <a href="http://jqueryui.com/demos/autocomplete/#combobox">Autocomplete Combobox</a> to
+help speed things along. I tried to also use the <a href="http://twitter.github.com/bootstrap/javascript.html#buttons">bootstrap-buttons</a> plugin in conjunction with it, but the buttons weren&rsquo;t working as expected.</p>
 
 <p>I changed the markup to load the button plugin prior to the jquery ui script and the radio buttons looked and behaved as expected, but the auto complete comboboxes
 looked funky and were no longer acting like text boxes and default to select boxes. When I switched back to loading the jquery ui first, the comboboxes resumed their normal operation.</p>
 
-<p>Lacking the time to get to the very bottom of why these two scripts weren&#8217;t playing nice together, I used a lifeline and got advice from a UX buddy. I was pointed toward the <a href="http://jqueryui.com/demos/button/#radio">button sets</a>
+<p>Lacking the time to get to the very bottom of why these two scripts weren&rsquo;t playing nice together, I used a lifeline and got advice from a UX buddy. I was pointed toward the <a href="http://jqueryui.com/demos/button/#radio">button sets</a>
 jquery ui. After changing the markup to use the button sets, everything was playing nicely together.</p>
 </div>
 
@@ -144,7 +145,7 @@ jquery ui. After changing the markup to use the button sets, everything was play
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://bforrest.com/blog/2012/04/30/doesnt-play-well-dot-dot-dot/" data-via="bforrest30" data-counturl="http://bforrest.com/blog/2012/04/30/doesnt-play-well-dot-dot-dot/" >Tweet</a>
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://bforrest.github.com/blog/2012/04/30/doesnt-play-well-dot-dot-dot/" data-via="bforrest30" data-counturl="http://bforrest.github.com/blog/2012/04/30/doesnt-play-well-dot-dot-dot/" >Tweet</a>
   
   
   
@@ -181,15 +182,15 @@ jquery ui. After changing the markup to use the button sets, everything was play
       </li>
     
       <li class="post">
-        <a href="/blog/2013/01/07/til-equals-%3E-reportviewer-control/">TIL => ReportViewer Control, Less is More</a>
+        <a href="/blog/2013/01/07/til-equals-%3E-reportviewer-control/">TIL => ReportViewer Control, Less Is More</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2012/08/18/e-star-trade-has-buggy-client-side-javascript/">e*trade has buggy client-side javascript</a>
+        <a href="/blog/2012/08/18/e-star-trade-has-buggy-client-side-javascript/">E*trade Has Buggy Client-side Javascript</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2012/08/05/console-dot-log-anywhere/">console.log anywhere</a>
+        <a href="/blog/2012/08/05/console-dot-log-anywhere/">console.log Anywhere</a>
       </li>
     
       <li class="post">
@@ -208,7 +209,7 @@ jquery ui. After changing the markup to use the button sets, everything was play
   <a href="https://github.com/bforrest">@bforrest</a> on GitHub
   
   <script type="text/javascript">
-    $.domReady(function(){
+    $(document).ready(function(){
         if (!window.jXHR){
             var jxhr = document.createElement('script');
             jxhr.type = 'text/javascript';
@@ -300,13 +301,13 @@ jquery ui. After changing the markup to use the button sets, everything was play
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://bforrest.com/blog/2012/04/30/doesnt-play-well-dot-dot-dot/';
-        var disqus_url = 'http://bforrest.com/blog/2012/04/30/doesnt-play-well-dot-dot-dot/';
+        var disqus_identifier = 'http://bforrest.github.com/blog/2012/04/30/doesnt-play-well-dot-dot-dot/';
+        var disqus_url = 'http://bforrest.github.com/blog/2012/04/30/doesnt-play-well-dot-dot-dot/';
         var disqus_script = 'embed.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
       (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     }());
 </script>
@@ -322,7 +323,7 @@ jquery ui. After changing the markup to use the button sets, everything was play
       var twitterWidgets = document.createElement('script');
       twitterWidgets.type = 'text/javascript';
       twitterWidgets.async = true;
-      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
       document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
     })();
   </script>
