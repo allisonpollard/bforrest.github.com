@@ -4,7 +4,7 @@
   <title><![CDATA[Improving Me]]></title>
   <link href="http://bforrest.github.com/atom.xml" rel="self"/>
   <link href="http://bforrest.github.com/"/>
-  <updated>2014-01-20T22:43:09-06:00</updated>
+  <updated>2014-08-08T21:36:40-05:00</updated>
   <id>http://bforrest.github.com/</id>
   <author>
     <name><![CDATA[Barry Forrest]]></name>
@@ -24,7 +24,7 @@
 
 <p>The ko click binding was one of those things. I was trying to listen for a click event for on a checkbox and do some fancy css swapping to highlight the user’s selection. Changing the styles worked smooth as butter, but the box remained unchecked.</p>
 
-<p>After several refreshes of the page, still no check in the box. The knockoutJS documentation covers this case &ndash; it is clearly noted as
+<p>After several refreshes of the page, still no check in the box. The knockoutJS documentation covers this case - it is clearly noted as
 Note 3: Allowing the default click action
 The ko.click binding doesn’t pass along the actual event. In order for the event to bubble, the bound function must return ‘true’.</p>
 
@@ -449,7 +449,7 @@ jquery ui. After changing the markup to use the button sets, everything was play
     <id>http://bforrest.github.com/blog/2012/01/21/Tree-Trim-Source-Cleaner</id>
     <content type="html"><![CDATA[<p><a href="http://code.google.com/p/treetrim/">Treetrim:</a></p>
 
-<p>I&#8217;ve used this spiffy utility many times. Every time I see a need for it, I&#8217;m working on a PC that doesn&#8217;t have it installed and I can never remember the magic incantation that allowed Google to reveal it to me. So, since I&#8217;m starting to suffer from old-timers, I&#8217;ll keep a handy link for it right here ;&ndash;)</p></p>
+<p>I&#8217;ve used this spiffy utility many times. Every time I see a need for it, I&#8217;m working on a PC that doesn&#8217;t have it installed and I can never remember the magic incantation that allowed Google to reveal it to me. So, since I&#8217;m starting to suffer from old-timers, I&#8217;ll keep a handy link for it right here ;-)</p></p>
 ]]></content>
   </entry>
   
@@ -538,10 +538,10 @@ jquery ui. After changing the markup to use the button sets, everything was play
   
   <entry>
     <title type="html"><![CDATA[Why Johnny Can’t Build a Decent User Interface.]]></title>
-    <link href="http://bforrest.github.com/blog/2011/04/23/Why-Johnny-can%27t-build-a-decent-ui/"/>
+    <link href="http://bforrest.github.com/blog/2011/04/23/Why-Johnny-can't-build-a-decent-ui/"/>
     <updated>2011-04-23T00:00:00-05:00</updated>
     <id>http://bforrest.github.com/blog/2011/04/23/Why-Johnny-can&#8217;t-build-a-decent-ui</id>
-    <content type="html"><![CDATA[<p><a href="http://jeffreyellis.org/blog/?p=8897" title="">Why Johnny can’t build a decent user interface.</a>An interesting read by <a href="http://thethinkerblog.com/?page_id=5">Jeffrey Ellis</a> that I picked up from a <a title="@shanselman" target="_blank" href="http://twitter.com/#!/shanselman">@shanselman</a> tweet. It is a reminder of why I write software &ndash;&gt; for end users to get something done. There&#8217;s a list of questions that I need to keep top of mind when developing applications:</p>
+    <content type="html"><![CDATA[<p><a href="http://jeffreyellis.org/blog/?p=8897" title="">Why Johnny can’t build a decent user interface.</a>An interesting read by <a href="http://thethinkerblog.com/?page_id=5">Jeffrey Ellis</a> that I picked up from a <a title="@shanselman" target="_blank" href="http://twitter.com/#!/shanselman">@shanselman</a> tweet. It is a reminder of why I write software -&gt; for end users to get something done. There&#8217;s a list of questions that I need to keep top of mind when developing applications:</p>
 
 <p>+Who are the users</p>
 

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Twitter Bootstrap | Improving Me]]></title>
+  <title><![CDATA[Category: twitter bootstrap | Improving Me]]></title>
   <link href="http://bforrest.github.com/blog/categories/twitter-bootstrap/atom.xml" rel="self"/>
   <link href="http://bforrest.github.com/"/>
-  <updated>2014-01-20T22:43:09-06:00</updated>
+  <updated>2014-08-08T21:36:40-05:00</updated>
   <id>http://bforrest.github.com/</id>
   <author>
     <name><![CDATA[Barry Forrest]]></name>
@@ -28,34 +28,29 @@
 </code>
 But I discovered that it is not JUST junk, there is a processScroll function that is just what I&rsquo;m looking for:</p>
 
-<p>``` javascript Scroll function and handler wiring
-// fix sub nav on scroll
+<pre><code class="javascript Scroll function and handler wiring">// fix sub nav on scroll
    var $win = $(window)
-   , $nav = $(&lsquo;.subnav&rsquo;)</p>
+   , $nav = $('.subnav')  
+      , navTop = $('.subnav').length &amp;&amp; $('.subnav').offset().top - 40
+      , isFixed = 0
 
-<pre><code>  , navTop = $('.subnav').length &amp;&amp; $('.subnav').offset().top - 40
-  , isFixed = 0
+   processScroll()
+
+   $win.on('scroll', processScroll)
+
+   function processScroll() {
+      var i, scrollTop = $win.scrollTop()
+      if (scrollTop &gt;= navTop &amp;&amp; !isFixed) {
+        isFixed = 1
+        $nav.addClass('subnav-fixed')
+      } else if (scrollTop &lt;= navTop &amp;&amp; isFixed) {
+        isFixed = 0
+        $nav.removeClass('subnav-fixed')
+      }
+   }
 </code></pre>
 
-<p>   processScroll()</p>
-
-<p>   $win.on(&lsquo;scroll&rsquo;, processScroll)</p>
-
-<p>   function processScroll() {</p>
-
-<pre><code>  var i, scrollTop = $win.scrollTop()
-  if (scrollTop &gt;= navTop &amp;&amp; !isFixed) {
-    isFixed = 1
-    $nav.addClass('subnav-fixed')
-  } else if (scrollTop &lt;= navTop &amp;&amp; isFixed) {
-    isFixed = 0
-    $nav.removeClass('subnav-fixed')
-  }
-</code></pre>
-
-<p>   }
-```
-This wires the processScroll() function to the window scroll event and toggles the navigation element based on where it rests relative to the viewport. The idea being to add the &lsquo;subnav-fixed&rsquo; CSS class to keep the element within the viewport.</p>
+<p>This wires the processScroll() function to the window scroll event and toggles the navigation element based on where it rests relative to the viewport. The idea being to add the &lsquo;subnav-fixed&rsquo; CSS class to keep the element within the viewport.</p>
 
 <p>Attached to the body tag was the first bit of markup that I needed to see:
 <code>html Page Markup
@@ -63,7 +58,7 @@ This wires the processScroll() function to the window scroll event and toggles t
 </code></p>
 
 <p>The navigation div tags contained the rest of the information:
-``` html Navigation markup</p>
+&#8220;` html Navigation markup</p>
 
 <div class="subnav">
       <li><a href="#labels">Labels</a></li>
@@ -76,7 +71,7 @@ This wires the processScroll() function to the window scroll event and toggles t
 
 <p><section id="labels">label information</section>
 <section id="badges">badge information</section>
-```
+&#8220;`
 By annotating the body tag with the data- attribute of &ldquo;data-spy&rdquo;, identifying sectional elements with id value and including the
 <a href="http://twitter.github.com/bootstrap/javascript.html#scrollspy">Scrollspy</a> JavaScript plugin, we are able to synchronize the active menu item with the section that is topmost within the viewport.</p>
 

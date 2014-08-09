@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: MVC | Improving Me]]></title>
+  <title><![CDATA[Category: mvc | Improving Me]]></title>
   <link href="http://bforrest.github.com/blog/categories/mvc/atom.xml" rel="self"/>
   <link href="http://bforrest.github.com/"/>
-  <updated>2014-01-20T22:43:09-06:00</updated>
+  <updated>2014-08-08T21:36:40-05:00</updated>
   <id>http://bforrest.github.com/</id>
   <author>
     <name><![CDATA[Barry Forrest]]></name>
