@@ -1,24 +1,15 @@
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
-
-  <title><![CDATA[Improving Me]]></title>
-  <link href="http://bforrest.github.com/atom.xml" rel="self"/>
-  <link href="http://bforrest.github.com/"/>
-  <updated>2015-01-23T22:00:56-06:00</updated>
-  <id>http://bforrest.github.com/</id>
-  <author>
-    <name><![CDATA[Barry Forrest]]></name>
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <atom:link rel="hub" href="http://pubsubhubbub.appspot.com" xmlns:atom="http://www.w3.org/2005/Atom"/>
+    <title>Improving Me</title>
+    <generator>Octopress</generator>
+    <link>http://bforrest.github.com</link>
+ 
     
-  </author>
-  <generator uri="http://octopress.org/">Octopress</generator>
-
-  
-  <entry>
-    <title type="html"><![CDATA[TIL => TIL: Knockoutjs]]></title>
-    <link href="http://bforrest.github.com/blog/2014/01/05/til-equals-%3E-til-knockoutjs/"/>
-    <updated>2014-01-05T21:46:00-06:00</updated>
-    <id>http://bforrest.github.com/blog/2014/01/05/til-equals->-til-knockoutjs</id>
-    <content type="html"><![CDATA[<h2>TIL: KnockoutJS Click Handler</h2>
+    <item>
+      <title>TIL =&gt; TIL: Knockoutjs</title>
+      <description><h2>TIL: KnockoutJS Click Handler</h2>
 
 <p>While working on a client project for <a href="https://twitter.com/improving">@improving</a>  I’ve learned a few things about Knockoutjs and its behavior. Most of them have been learned the hard way, by reading documentation after something didn’t work as expected.</p>
 
@@ -29,15 +20,15 @@ Note 3: Allowing the default click action
 The ko.click binding doesn’t pass along the actual event. In order for the event to bubble, the bound function must return ‘true’.</p>
 
 <p>Now that I’ve added a return value of true to my javascript handler, the checkbox is updated as I had expected it to be from the beginning!</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[TIL => ReportViewer Control, Less Is More]]></title>
-    <link href="http://bforrest.github.com/blog/2013/01/07/til-equals-%3E-reportviewer-control/"/>
-    <updated>2013-01-07T21:32:00-06:00</updated>
-    <id>http://bforrest.github.com/blog/2013/01/07/til-equals->-reportviewer-control</id>
-    <content type="html"><![CDATA[<h2>TIL: ReportViewer WebControl => Less is More</h2>
+</description>
+      <link>http://bforrest.github.com/blog/2014/01/05/til-equals-%3E-til-knockoutjs/</link>
+      <pubDate>2014-01-05T21:46:00-06:00</pubDate>
+      <guid>http://bforrest.github.com/blog/2014/01/05/til-equals->-til-knockoutjs</guid>
+    </item>
+    
+    <item>
+      <title>TIL =&gt; ReportViewer Control, Less is More</title>
+      <description><h2>TIL: ReportViewer WebControl => Less is More</h2>
 
 <p>Stop me if you&rsquo;ve heard this one: &ldquo;Their IT staff is going to take care of that development &hellip;&rdquo; And so it was recently on a project I am developing.</p>
 
@@ -80,15 +71,15 @@ protected void Page_Load(object sender, EventArgs e)
 
 
 <p> wound up doing it setting the report server and report title in the OnInit method of the web-page. I also bound the selection controls to the available options for the current user and wired up the change event handlers. PostBack events that aren&rsquo;t triggered by the selection controls that I added to the web form are ignored by the code behind and the httpHandler for the report viewer control handles the interaction with the SSRS server.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[E*trade Has Buggy Client-side Javascript]]></title>
-    <link href="http://bforrest.github.com/blog/2012/08/18/e-star-trade-has-buggy-client-side-javascript/"/>
-    <updated>2012-08-18T08:47:00-05:00</updated>
-    <id>http://bforrest.github.com/blog/2012/08/18/e-star-trade-has-buggy-client-side-javascript</id>
-    <content type="html"><![CDATA[<p>Once a month I get a little reminder that I need to go pay my e*Trade credit card bill. Every month for as long as I can remember I&rsquo;ve tried to use their user interface to pay off my current balance and been told by an error dialog that my selection is not valid.</p>
+</description>
+      <link>http://bforrest.github.com/blog/2013/01/07/til-equals-%3E-reportviewer-control/</link>
+      <pubDate>2013-01-07T21:32:00-06:00</pubDate>
+      <guid>http://bforrest.github.com/blog/2013/01/07/til-equals->-reportviewer-control</guid>
+    </item>
+    
+    <item>
+      <title>e*trade has buggy client-side javascript</title>
+      <description><p>Once a month I get a little reminder that I need to go pay my e*Trade credit card bill. Every month for as long as I can remember I&rsquo;ve tried to use their user interface to pay off my current balance and been told by an error dialog that my selection is not valid.</p>
 
 <p><img src="http://bforrest.github.com/images/eTrade_Error.png" alt="Error Message"/></p>
 
@@ -147,15 +138,15 @@ if ((document.theForm.transfer_freq.options.value != &quot;1&quot;) &amp;&amp; (
 <p>With a little jQuery goodness, I can actually perform the comparison that I believe was intended. Now the first part of the expression has a chance to evaluate to false.</p>
 
 <p>One day I&rsquo;d like to use that form and be able to click the &ldquo;Current Balance&rdquo; radio button and have the form submit without reminding me that I&rsquo;m using a site with buggy code.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[console.log Anywhere]]></title>
-    <link href="http://bforrest.github.com/blog/2012/08/05/console-dot-log-anywhere/"/>
-    <updated>2012-08-05T11:46:00-05:00</updated>
-    <id>http://bforrest.github.com/blog/2012/08/05/console-dot-log-anywhere</id>
-    <content type="html"><![CDATA[<p>My current assingment for <a href="http://www.improvingenterprises.com" target="_blank">Improving Enterprises</a> has me writing much more client-side javascript. I&rsquo;m not a javascript ninja, so I lean on the console window to confirm that the script is doing what I expected it to do. This approach works great until I view a page in IE, which has no clue what &ldquo;console&rdquo; means and acosts me with script error popups.</p>
+</description>
+      <link>http://bforrest.github.com/blog/2012/08/18/e-star-trade-has-buggy-client-side-javascript/</link>
+      <pubDate>2012-08-18T08:47:00-05:00</pubDate>
+      <guid>http://bforrest.github.com/blog/2012/08/18/e-star-trade-has-buggy-client-side-javascript</guid>
+    </item>
+    
+    <item>
+      <title>console.log anywhere</title>
+      <description><p>My current assingment for <a href="http://www.improvingenterprises.com" target="_blank">Improving Enterprises</a> has me writing much more client-side javascript. I&rsquo;m not a javascript ninja, so I lean on the console window to confirm that the script is doing what I expected it to do. This approach works great until I view a page in IE, which has no clue what &ldquo;console&rdquo; means and acosts me with script error popups.</p>
 
 <p>This finally got annoying enough that I started looking for a universal solution. <a href="http://stackoverflow.com/a/7585409" target="_blank">Stack Overflow</a> to the rescue.  Just so I don&rsquo;t have to search high and low for it again, I put a gist on github where it&rsquo;s easy for me to find again.</p>
 
@@ -173,15 +164,15 @@ if ((document.theForm.transfer_freq.options.value != &quot;1&quot;) &amp;&amp; (
 
 
 <p>Now while I&rsquo;m testing things in different browser while developing the scripts, I don&rsquo;t have IE complaining about a script error.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Doesn't Play Well...]]></title>
-    <link href="http://bforrest.github.com/blog/2012/04/30/doesnt-play-well-dot-dot-dot/"/>
-    <updated>2012-04-30T08:25:00-05:00</updated>
-    <id>http://bforrest.github.com/blog/2012/04/30/doesnt-play-well-dot-dot-dot</id>
-    <content type="html"><![CDATA[<p>I&rsquo;ve been working on some &ldquo;prototypes&rdquo; for a new <a href="http://www.improvingenterprises.com">Improving</a> client. One of our UX people told us to use <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap</a>
+</description>
+      <link>http://bforrest.github.com/blog/2012/08/05/console-dot-log-anywhere/</link>
+      <pubDate>2012-08-05T11:46:00-05:00</pubDate>
+      <guid>http://bforrest.github.com/blog/2012/08/05/console-dot-log-anywhere</guid>
+    </item>
+    
+    <item>
+      <title>Doesn&#8217;t Play Well&#8230;</title>
+      <description><p>I&rsquo;ve been working on some &ldquo;prototypes&rdquo; for a new <a href="http://www.improvingenterprises.com">Improving</a> client. One of our UX people told us to use <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap</a>
 and don&rsquo;t look back.</p>
 
 <p>These prototypes are for a data entry focused application, so we&rsquo;ve been using the <a href="http://jqueryui.com/demos/autocomplete/#combobox">Autocomplete Combobox</a> to
@@ -192,15 +183,15 @@ looked funky and were no longer acting like text boxes and default to select box
 
 <p>Lacking the time to get to the very bottom of why these two scripts weren&rsquo;t playing nice together, I used a lifeline and got advice from a UX buddy. I was pointed toward the <a href="http://jqueryui.com/demos/button/#radio">button sets</a>
 jquery ui. After changing the markup to use the button sets, everything was playing nicely together.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Adding CoderWall Badges]]></title>
-    <link href="http://bforrest.github.com/blog/2012/04/22/adding-coderwall-badges/"/>
-    <updated>2012-04-22T10:42:00-05:00</updated>
-    <id>http://bforrest.github.com/blog/2012/04/22/adding-coderwall-badges</id>
-    <content type="html"><![CDATA[<p>I&rsquo;ve picked up a few badges via <a href="http://coderwall.com/">CoderWall</a> and I wanted to include them on the blog with the rest of the information in the right side column.</p>
+</description>
+      <link>http://bforrest.github.com/blog/2012/04/30/doesnt-play-well-dot-dot-dot/</link>
+      <pubDate>2012-04-30T08:25:00-05:00</pubDate>
+      <guid>http://bforrest.github.com/blog/2012/04/30/doesnt-play-well-dot-dot-dot</guid>
+    </item>
+    
+    <item>
+      <title>Adding CoderWall Badges</title>
+      <description><p>I&rsquo;ve picked up a few badges via <a href="http://coderwall.com/">CoderWall</a> and I wanted to include them on the blog with the rest of the information in the right side column.</p>
 
 <p>CoderWall has <a href="http://coderwall.com/api">instructions</a> under the sub heading &ldquo;Official blog badge&rdquo; that detail how to interact with their web api for retrieving badges. My main investigation was how and where to include these snippets within the octopress templates.</p>
 
@@ -232,15 +223,15 @@ jquery ui. After changing the markup to use the button sets, everything was play
 
 
 <p>One more time thru the &lsquo;rake generate, rake preview&rsquo; dance and&hellip; TA-DA! At the bottom of the Aside column I now have CoderWall badges.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Fixed Navigation Bar With Twitter Bootstrap]]></title>
-    <link href="http://bforrest.github.com/blog/2012/04/18/fixed-navigation-bar-with-twitter-bootstrap/"/>
-    <updated>2012-04-18T15:27:00-05:00</updated>
-    <id>http://bforrest.github.com/blog/2012/04/18/fixed-navigation-bar-with-twitter-bootstrap</id>
-    <content type="html"><![CDATA[<p><a href="http://twitter.github.com/bootstrap/index.html">Twitter Bootstrap</a> has many very interesting features available. I really liked their fixed sub navigation menus for the feature pages. As you scroll past the subnavigation, it docs with the top of the scroll window and stays there. It also enables click navigation to other feature sections.</p>
+</description>
+      <link>http://bforrest.github.com/blog/2012/04/22/adding-coderwall-badges/</link>
+      <pubDate>2012-04-22T10:42:00-05:00</pubDate>
+      <guid>http://bforrest.github.com/blog/2012/04/22/adding-coderwall-badges</guid>
+    </item>
+    
+    <item>
+      <title>Fixed Navigation Bar With Twitter Bootstrap</title>
+      <description><p><a href="http://twitter.github.com/bootstrap/index.html">Twitter Bootstrap</a> has many very interesting features available. I really liked their fixed sub navigation menus for the feature pages. As you scroll past the subnavigation, it docs with the top of the scroll window and stays there. It also enables click navigation to other feature sections.</p>
 
 <p>I wanted to have the same functionality for my own html pages, so I started digging around. Looking at the page source, I saw an include for &ldquo;/js/application.js&rdquo;, which is included in the github source project, but is not part of the downloaded assets. At the top of the file is this nice disclaimer:</p>
 
@@ -330,26 +321,26 @@ jquery ui. After changing the markup to use the button sets, everything was play
 <a href="http://twitter.github.com/bootstrap/javascript.html#scrollspy">Scrollspy</a> JavaScript plugin, we are able to synchronize the active menu item with the section that is topmost within the viewport.</p>
 
 <p>Now on my // TODO: list is to trick up the blog template to keep it&rsquo;s top navigation bar fixed along the top&hellip;</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Everything Old Is New Again]]></title>
-    <link href="http://bforrest.github.com/blog/2012/04/16/everything-old-is-new-again/"/>
-    <updated>2012-04-16T11:56:00-05:00</updated>
-    <id>http://bforrest.github.com/blog/2012/04/16/everything-old-is-new-again</id>
-    <content type="html"><![CDATA[<p>I spent some time over the weekend dragging along old posts from my tumblr blog that deal with programming. I didn&rsquo;t bother with the instagram pictures or the four square checkins. After a few failed attempts to get the tumblr posts where the were suposed to be, I opted to stash them in a working directory and move them by hand.</p>
+</description>
+      <link>http://bforrest.github.com/blog/2012/04/18/fixed-navigation-bar-with-twitter-bootstrap/</link>
+      <pubDate>2012-04-18T15:27:00-05:00</pubDate>
+      <guid>http://bforrest.github.com/blog/2012/04/18/fixed-navigation-bar-with-twitter-bootstrap</guid>
+    </item>
+    
+    <item>
+      <title>Everything Old is New Again</title>
+      <description><p>I spent some time over the weekend dragging along old posts from my tumblr blog that deal with programming. I didn&rsquo;t bother with the instagram pictures or the four square checkins. After a few failed attempts to get the tumblr posts where the were suposed to be, I opted to stash them in a working directory and move them by hand.</p>
 
 <p>Now all of my <code>&lt;scarcasm&gt;</code>glorious code related posts<code>&lt;/sarcasm&gt;</code> are in one place, it&rsquo;s time to dust up some posts about my shiny new play things <a href="http://twitter.github.com/bootstrap/" title="">Twitter Bootstrasp</a> <a href="https://octopress.org">Octopress</a> and <a href="http://daringfireball.net/projects/markdown/syntax" title="">Markdown</a>. Stand by for more intesting things in the very near future.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[That Was Easy]]></title>
-    <link href="http://bforrest.github.com/blog/2012/04/13/that-was-easy/"/>
-    <updated>2012-04-13T07:18:00-05:00</updated>
-    <id>http://bforrest.github.com/blog/2012/04/13/that-was-easy</id>
-    <content type="html"><![CDATA[<h2>Taking the Octopress plunge</h2>
+</description>
+      <link>http://bforrest.github.com/blog/2012/04/16/everything-old-is-new-again/</link>
+      <pubDate>2012-04-16T11:56:00-05:00</pubDate>
+      <guid>http://bforrest.github.com/blog/2012/04/16/everything-old-is-new-again</guid>
+    </item>
+    
+    <item>
+      <title>That was easy</title>
+      <description><h2>Taking the Octopress plunge</h2>
 
 <p>Last night I took the plunge and set up <a href="http://octopress.org/">octopress</a> to host a <a href="http://bforrest.github.com">blog on github</a> using github pages. The documentation on octopress.org is impeccable. My only hic-up was not fully understanding that I need to run</p>
 
@@ -362,15 +353,15 @@ jquery ui. After changing the markup to use the button sets, everything was play
 <p>after committing and pushing from my source branch.</p>
 
 <p>Now to have some fun learning <a href="http://daringfireball.net/projects/markdown/">markdown</a> and how to style this so that it doesn&rsquo;t look like everyone else&rsquo;s octopress blog</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Programming & Barriers to Entry]]></title>
-    <link href="http://bforrest.github.com/blog/2012/02/27/Programming-and-Barriers-to-Entry/"/>
-    <updated>2012-02-27T00:00:00-06:00</updated>
-    <id>http://bforrest.github.com/blog/2012/02/27/Programming-and-Barriers-to-Entry</id>
-    <content type="html"><![CDATA[<p>A <a href="https://twitter.com/#!/coridrew">fellow learner</a> has posted <a href="http://truncatedcodr.wordpress.com/2012/01/25/programming-barriers-to-entry/">&ldquo;Programming &amp; Barriers to Entry&rdquo;</a>. Cori has much to say in this article concentrated around command line tools, vim and Ruby. I&#8217;d like to comment on some of the perceptions and share my own opinions.</p>
+</description>
+      <link>http://bforrest.github.com/blog/2012/04/13/that-was-easy/</link>
+      <pubDate>2012-04-13T07:18:00-05:00</pubDate>
+      <guid>http://bforrest.github.com/blog/2012/04/13/that-was-easy</guid>
+    </item>
+    
+    <item>
+      <title>Programming &amp; Barriers to Entry</title>
+      <description><p>A <a href="https://twitter.com/#!/coridrew">fellow learner</a> has posted <a href="http://truncatedcodr.wordpress.com/2012/01/25/programming-barriers-to-entry/">&ldquo;Programming &amp; Barriers to Entry&rdquo;</a>. Cori has much to say in this article concentrated around command line tools, vim and Ruby. I&#8217;d like to comment on some of the perceptions and share my own opinions.</p>
 
 <h3>Command Line</h3>
 
@@ -439,26 +430,26 @@ jquery ui. After changing the markup to use the button sets, everything was play
 <p>There seems to be a strong correlation between Macs and Ruby developers among <a href="http://dallashackclub.com/" target="_blank">Hack Club</a> attendees. Many of the folks who attend do own Macs. <a href="http://improvingenterprises.com/" target="_blank">Improving Enterprises</a>, my employer and sponsor of many wonderful user groups, has an amazing employee purchase plan for computers and many of the consultants take full advantage of that benefit. Several of the Macs at Hack Club are running Windows 7 in native mode and many more are running Windows 7 via VMWare Fusion of Parallels.</p>
 
 <p>I&#8217;d hazard a guess that <a href="ttp://twitter.com/gregvaughn" target="_blank">Greg Vaughn</a> is in the minority and using Ruby in OSX. <a href="http://twitter.com/amirrajan" target="_blank">Amir</a> boots to Windows natively via BootCamp and I believe does all of his Ruby development under Windows. I&#8217;ve installed Ruby 1.9 in my VMWare instance and use Growl For Windows and a ruby command prompt for SpecWatchr when I&#8217;m deliberately practicing BDD through the beauty of <a href="http://www.nspec.org/about" target="_blank">NSpec</a>. Ruby in this group is more about learning something new since most of the crew work in .net for paychecks.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Treetrim: Trims Source Code Trees]]></title>
-    <link href="http://bforrest.github.com/blog/2012/01/21/Tree-Trim-Source-Cleaner/"/>
-    <updated>2012-01-21T00:00:00-06:00</updated>
-    <id>http://bforrest.github.com/blog/2012/01/21/Tree-Trim-Source-Cleaner</id>
-    <content type="html"><![CDATA[<p><a href="http://code.google.com/p/treetrim/">Treetrim:</a></p>
+</description>
+      <link>http://bforrest.github.com/blog/2012/02/27/Programming-and-Barriers-to-Entry/</link>
+      <pubDate>2012-02-27T00:00:00-06:00</pubDate>
+      <guid>http://bforrest.github.com/blog/2012/02/27/Programming-and-Barriers-to-Entry</guid>
+    </item>
+    
+    <item>
+      <title>treetrim: Trims source code trees</title>
+      <description><p><a href="http://code.google.com/p/treetrim/">Treetrim:</a></p>
 
 <p>I&#8217;ve used this spiffy utility many times. Every time I see a need for it, I&#8217;m working on a PC that doesn&#8217;t have it installed and I can never remember the magic incantation that allowed Google to reveal it to me. So, since I&#8217;m starting to suffer from old-timers, I&#8217;ll keep a handy link for it right here ;-)</p></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[EF Code First & AppHarbor]]></title>
-    <link href="http://bforrest.github.com/blog/2011/08/25/EF-Code-First-and-AppHarbor/"/>
-    <updated>2011-08-25T00:00:00-05:00</updated>
-    <id>http://bforrest.github.com/blog/2011/08/25/EF-Code-First-and-AppHarbor</id>
-    <content type="html"><![CDATA[<p>Since my employer, <a href="http://www.improvingenterprises.com/">Improving Enterprises</a> lined me up a new gig that uses Entity Framework Code First, I thought I kick off a learning side project with MVC3 and deploy it to <a href="https://appharbor.com/">AppHarbor</a>. Everything seemed simple enough. Use Nuget to install the code first bits, hammer out a couple of model and a datacontext and BOOM! data goes into a database.</p>
+</description>
+      <link>http://bforrest.github.com/blog/2012/01/21/Tree-Trim-Source-Cleaner/</link>
+      <pubDate>2012-01-21T00:00:00-06:00</pubDate>
+      <guid>http://bforrest.github.com/blog/2012/01/21/Tree-Trim-Source-Cleaner</guid>
+    </item>
+    
+    <item>
+      <title>EF Code First &amp; AppHarbor</title>
+      <description><p>Since my employer, <a href="http://www.improvingenterprises.com/">Improving Enterprises</a> lined me up a new gig that uses Entity Framework Code First, I thought I kick off a learning side project with MVC3 and deploy it to <a href="https://appharbor.com/">AppHarbor</a>. Everything seemed simple enough. Use Nuget to install the code first bits, hammer out a couple of model and a datacontext and BOOM! data goes into a database.</p>
 
 <p>It wasn&#8217;t anything pretty, but I was ready to deploy it to AppHarbor. That sounded great, but my first deploy failed. The local build compiled and worked as expected. The source that I pushed to AppHarbor compiled without problem, but the deployment failed.</p>
 
@@ -488,28 +479,28 @@ jquery ui. After changing the markup to use the button sets, everything was play
 <p>So, after following some clear instructions to configure my connection string with the AppHarbor standards and using this NuGet package, I now have my first MVC3 application successfully deployed to AppHarbor! Hopefully this will help others, but I&#8217;m happy just to have this information in a place where I&#8217;ll be able to find it again.</p>
 
 <p>Now to tweak, prune and watch it grow into something that is emblematic of my learning.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Javascript Programming Patterns]]></title>
-    <link href="http://bforrest.github.com/blog/2011/08/21/Javascript-Programming-Patterns/"/>
-    <updated>2011-08-21T00:00:00-05:00</updated>
-    <id>http://bforrest.github.com/blog/2011/08/21/Javascript-Programming-Patterns</id>
-    <content type="html"><![CDATA[<p><a href="href=" title="http://www.klauskomenda.com/code/javascript-programming-patterns/#lazy">Javascript Programming Patterns</a></p>
+</description>
+      <link>http://bforrest.github.com/blog/2011/08/25/EF-Code-First-and-AppHarbor/</link>
+      <pubDate>2011-08-25T00:00:00-05:00</pubDate>
+      <guid>http://bforrest.github.com/blog/2011/08/25/EF-Code-First-and-AppHarbor</guid>
+    </item>
+    
+    <item>
+      <title>Javascript Programming Patterns</title>
+      <description><p><a href="href=" title="http://www.klauskomenda.com/code/javascript-programming-patterns/#lazy">Javascript Programming Patterns</a></p>
 
 <p>Nice reference material that I got from <a href="href=" title="http://twitter.com/#!/jrgarcia">JR Garcia</a></p>
 
 <p>I&#8217;ve been away from web development for just a bit too long and have a lot of catching up to do with respect to all of the great work going on in the javascript space.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Css for Developers From Dallas TechFest]]></title>
-    <link href="http://bforrest.github.com/blog/2011/08/16/CSS-for-Developers/"/>
-    <updated>2011-08-16T00:00:00-05:00</updated>
-    <id>http://bforrest.github.com/blog/2011/08/16/CSS-for-Developers</id>
-    <content type="html"><![CDATA[<p>Here are some of my take aways from <a href="href=" title="http://ericsowell.com/">Eric Sowell&rsquo;s</a> presentation at the <a href="href=" title="http://dallastechfest.com/">Dallas Tech Fest</a></p>
+</description>
+      <link>http://bforrest.github.com/blog/2011/08/21/Javascript-Programming-Patterns/</link>
+      <pubDate>2011-08-21T00:00:00-05:00</pubDate>
+      <guid>http://bforrest.github.com/blog/2011/08/21/Javascript-Programming-Patterns</guid>
+    </item>
+    
+    <item>
+      <title>Css for Developers from Dallas TechFest</title>
+      <description><p>Here are some of my take aways from <a href="href=" title="http://ericsowell.com/">Eric Sowell&rsquo;s</a> presentation at the <a href="href=" title="http://dallastechfest.com/">Dallas Tech Fest</a></p>
 
 <p>+Semantic markup makes reading html simpler</p>
 
@@ -522,26 +513,26 @@ jquery ui. After changing the markup to use the button sets, everything was play
 <p>I aslo heard the phrase &#8220;In general, you should be more specific&#8221;. That sounds rather odd, but given a context of trying to cascade styles to UI elements, it makes more sense. When you can be more specific with your selectors, you will be less surprised by the result.</p>
 
 <p>For additional resources for learning about Css, Eric suggested books by Zeldman, Marcotte, Cederholm and Meyer.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[The Flat Tire Principle for Source Control]]></title>
-    <link href="http://bforrest.github.com/blog/2011/05/10/The-Flat-Tire-Principle-for-Source-Control/"/>
-    <updated>2011-05-10T00:00:00-05:00</updated>
-    <id>http://bforrest.github.com/blog/2011/05/10/The-Flat-Tire-Principle-for-Source-Control</id>
-    <content type="html"><![CDATA[<p><a href="href=" title="http://lostechies.com/erichexter/2009/05/19/the-flat-tire-principal-for-source-control/">The Flat Tire Principle for Source Control</a></p>
+</description>
+      <link>http://bforrest.github.com/blog/2011/08/16/CSS-for-Developers/</link>
+      <pubDate>2011-08-16T00:00:00-05:00</pubDate>
+      <guid>http://bforrest.github.com/blog/2011/08/16/CSS-for-Developers</guid>
+    </item>
+    
+    <item>
+      <title>The Flat Tire Principle for Source Control</title>
+      <description><p><a href="href=" title="http://lostechies.com/erichexter/2009/05/19/the-flat-tire-principal-for-source-control/">The Flat Tire Principle for Source Control</a></p>
 
 <p>Here&#8217;s an oldie but a a goody by <a href="href=" title="http://lostechies.com/erichexter/">Eric Hexter</a> on why you should source control your dependencies and 3rd party libraries. He uses an automobile which carries all the tools required to replace a flat tire to illustrate how we should treat our source control systems. Anything that code depends on to do it&#8217;s job should be stored in the same version control system right along side of the code.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Why Johnny Can’t Build a Decent User Interface.]]></title>
-    <link href="http://bforrest.github.com/blog/2011/04/23/Why-Johnny-can't-build-a-decent-ui/"/>
-    <updated>2011-04-23T00:00:00-05:00</updated>
-    <id>http://bforrest.github.com/blog/2011/04/23/Why-Johnny-can&#8217;t-build-a-decent-ui</id>
-    <content type="html"><![CDATA[<p><a href="http://jeffreyellis.org/blog/?p=8897" title="">Why Johnny can’t build a decent user interface.</a>An interesting read by <a href="http://thethinkerblog.com/?page_id=5">Jeffrey Ellis</a> that I picked up from a <a title="@shanselman" target="_blank" href="http://twitter.com/#!/shanselman">@shanselman</a> tweet. It is a reminder of why I write software -&gt; for end users to get something done. There&#8217;s a list of questions that I need to keep top of mind when developing applications:</p>
+</description>
+      <link>http://bforrest.github.com/blog/2011/05/10/The-Flat-Tire-Principle-for-Source-Control/</link>
+      <pubDate>2011-05-10T00:00:00-05:00</pubDate>
+      <guid>http://bforrest.github.com/blog/2011/05/10/The-Flat-Tire-Principle-for-Source-Control</guid>
+    </item>
+    
+    <item>
+      <title>Why Johnny can’t build a decent user interface.</title>
+      <description><p><a href="http://jeffreyellis.org/blog/?p=8897" title="">Why Johnny can’t build a decent user interface.</a>An interesting read by <a href="http://thethinkerblog.com/?page_id=5">Jeffrey Ellis</a> that I picked up from a <a title="@shanselman" target="_blank" href="http://twitter.com/#!/shanselman">@shanselman</a> tweet. It is a reminder of why I write software -&gt; for end users to get something done. There&#8217;s a list of questions that I need to keep top of mind when developing applications:</p>
 
 <p>+Who are the users</p>
 
@@ -552,7 +543,11 @@ jquery ui. After changing the markup to use the button sets, everything was play
 <p>+What information do the users need in order to accomplish those tasks</p>
 
 <p>The information within the comments is also enlightening.</p>
-]]></content>
-  </entry>
-  
-</feed>
+</description>
+      <link>http://bforrest.github.com/blog/2011/04/23/Why-Johnny-can&#8217;t-build-a-decent-ui/</link>
+      <pubDate>2011-04-23T00:00:00-05:00</pubDate>
+      <guid>http://bforrest.github.com/blog/2011/04/23/Why-Johnny-can&#8217;t-build-a-decent-ui</guid>
+    </item>
+    
+  </channel>
+</rss>
