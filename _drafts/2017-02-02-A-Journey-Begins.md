@@ -21,6 +21,11 @@ There was lots of worrying. Accompanied by lots of reading from the various DISC
 
 By the morning of the talk, Allison and I had met several times to run through the talk. I'd crammed all things DISC and I was much more relaxed and calm than I ever would have imagined. When we got to the room to do final prep, there was only one snag - there was only one microphone and it had left the room with the previous speaker.
 
-The last time I had to project my voice was on a parade ground more years ago than I'm willing to admit. Allison said that I sounded pitiful (or some such) and I really need a mic to be heard in the back of the room. I was rescued within minutes as the previous speaker reformed their clepto ways and brought the mic back.
+The last time I had to project my voice was on a parade ground more years ago than I'm willing to admit and it wasn't exactly conducive to a presentation. Allison said that I sounded pitiful (or some such) and I really need a mic to be heard in the back of the room. I was rescued within minutes as the previous speaker reformed their clepto ways and brought the mic back.
 
-Most of the talk was a blur. I didn't feint. There were no vurps. My voice only cracked once that I'll admit to publicly. Each of the attendees seemed to have a lovely time with the workshop activity (except for the ONE person who hates group activities, but showed up anyway).
+Most of the talk was a blur. I didn't feint. There were no vurps. My voice only cracked once that I'll admit to publicly. Each of the attendees seemed to have a lovely time.
+
+I was very encourage by the attendee feedback. The majority enjoyed
+the workshop activity (except for the ONE person who hates group activities, but showed up anyway). One person wasn't thrilled with a duplicate topic, but also showed up anyway. 
+
+Allison cleary thought it was worth doing again - she's submitted to two conferences that I've heard of and a half-dozen that I haven't. Our next stop is [Agile Arizona] (https://agilearizona.org/speakers.html#sn-allison-pollard-barry-forrest)
