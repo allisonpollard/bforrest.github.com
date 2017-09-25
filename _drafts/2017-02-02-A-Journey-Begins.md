@@ -28,4 +28,4 @@ Most of the talk was a blur. I didn't feint. There were no vurps. My voice only 
 I was very encourage by the attendee feedback. The majority enjoyed
 the workshop activity (except for the ONE person who hates group activities, but showed up anyway). One person wasn't thrilled with a duplicate topic, but also showed up anyway. 
 
-Allison cleary thought it was worth doing again - she's submitted to two conferences that I've heard of and a half-dozen that I haven't. Our next stop is [Agile Arizona] (https://agilearizona.org/speakers.html#sn-allison-pollard-barry-forrest)
+Allison cleary thought it was worth doing again - she's submitted to two conferences that I've heard of and a half-dozen that I haven't. Our next stop is [Agile Arizona](https://agilearizona.org/speakers.html#sn-allison-pollard-barry-forrest)
